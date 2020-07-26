@@ -8,7 +8,7 @@ export default class Education extends React.Component {
             <View style={styles.hello}>
                 <Text style= {styles.filler}> </Text>
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
-                <Text> 15k followers</Text>
+                <Text> num followers</Text>
             </View>
         );
     }
