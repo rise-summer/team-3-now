@@ -1,6 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {WebView} from 'react-native-webview';
+//import { BottomNavigation, BottomNavigationTab, Icon } from '@ui-kitten/components';
+
+
+import {Bottom} from './BottomNavigationBar';
+
+
+  
+
+
+
 export default class Education extends React.Component {
     render () {
         return (
@@ -11,9 +21,11 @@ export default class Education extends React.Component {
                 <Text> num followers</Text>
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
-                    originWhitelist={['*']}
+                  
                     style={{height:0, width:300}}
                 />
+                <Bottom></Bottom>
+                
 
             </View>
         );
