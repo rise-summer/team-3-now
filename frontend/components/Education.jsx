@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import {WebView} from 'react-native-webview';
 //import { BottomNavigation, BottomNavigationTab, Icon } from '@ui-kitten/components';
 
-
 import {Bottom} from './BottomNavigationBar';
+import {Follow} from './FollowButton'
 
 
   
@@ -18,7 +18,10 @@ export default class Education extends React.Component {
             <View style={styles.hello}>
                 <Text style= {styles.filler}> </Text>
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
-                <Text> num followers</Text>
+                <Text>num followers</Text>
+                <Follow/>
+
+
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
                   
