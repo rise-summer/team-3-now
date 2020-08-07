@@ -1,29 +1,28 @@
 import React from "react";
-import { View, Button, StyleSheet, TouchableOpacity, Text } from "react-native";
+import { View, Button, StyleSheet, TouchableOpacity, Text, navigate } from "react-native";
+import {createStateNavigator} from 'react-navigation'
+import ImpactPage from './Impact'
 
-const AppButton = ({title }) => (
+
+
+const AppButton = ({title, onPress}) => (
     
   <TouchableOpacity 
-    onPress={()=>{
-        if (title== 'FOLLOW'){
-            title='FOLLOWING'
-        }
-        else if (title == 'FOLLOWING'){
-            title='FOLLOW'
-        }
-        
-    }} 
+    //onPress={()=>navigation.navigate() } 
+    onPress={onPress}
     style={styles.appButtonContainer}>
     <Text style={styles.appButtonText}>{title}</Text>
   </TouchableOpacity>
 );
 
-export const Follow = () => {
-    
+export const Follow = ({navigation}) => {
+  
+  
+
   return (
     <View style={styles.screenContainer}>
         
-      <AppButton title = 'FOLLOW'/>
+      <AppButton title = 'FOLLOW'  />
     </View>
   );
 };

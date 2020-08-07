@@ -1,9 +1,15 @@
 
-
 import React from 'react';
-import { BottomNavigation, BottomNavigationTab } from '@ui-kitten/components';
+import { BottomNavigation, BottomNavigationTab, Icon } from '@ui-kitten/components';
 
-//import {Ionicons} from '@expo/vector-icons';
+const PersonIcon = (props) => (
+  <Icon {...props} name='person-outline'/>
+);
+
+
+const SearchIcon = (props) => (
+  <Icon {...props} name='search-outline'/>
+);
 
 export const Bottom = () => {
 
@@ -11,11 +17,13 @@ export const Bottom = () => {
 
   return (
     <BottomNavigation
+      
       selectedIndex={selectedIndex}
       onSelect={index => setSelectedIndex(index)}>
-      <BottomNavigationTab title='Search'/>
-      <BottomNavigationTab title='Profile'/>
-      
+      <BottomNavigationTab icon={PersonIcon} title='PROFILE' />
+     
+      <BottomNavigationTab icon={SearchIcon} title='SEARCH'/>
     </BottomNavigation>
   );
 };
+

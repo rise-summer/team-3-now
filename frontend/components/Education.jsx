@@ -19,7 +19,7 @@ export default class Education extends React.Component {
                 <Text style= {styles.filler}> </Text>
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
                 <Text>num followers</Text>
-                <Follow/>
+                <Follow></Follow>
 
 
                 <WebView
@@ -27,6 +27,8 @@ export default class Education extends React.Component {
                   
                     style={{height:0, width:300}}
                 />
+                
+                
                 <Bottom></Bottom>
                 
 
@@ -43,6 +45,7 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'flex-start',
     },
+    
     filler: {
         fontSize: 100,    
     },
