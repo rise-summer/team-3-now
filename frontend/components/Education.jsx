@@ -5,7 +5,7 @@ import {WebView} from 'react-native-webview';
 
 import {Bottom} from './BottomNavigationBar';
 import {Follow} from './FollowButton'
-import { HelpButton } from './HowYouCanHelpButton';
+import {HelpButton} from './HowYouCanHelpButton';
 import LightInfin from './LightAndInfin'
 
 
@@ -31,6 +31,7 @@ export default class Education extends React.Component {
                 
                 
                 <Bottom></Bottom>
+                <HelpButton></HelpButton>
                 
                 
 
