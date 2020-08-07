@@ -6,9 +6,7 @@ import {WebView} from 'react-native-webview';
 import {Bottom} from './BottomNavigationBar';
 import {Follow} from './FollowButton'
 import { HelpButton } from './HowYouCanHelpButton';
-
-
-  
+import LightInfin from './LightAndInfin'
 
 
 
@@ -28,10 +26,12 @@ export default class Education extends React.Component {
                   
                     style={{height:0, width:300}}
                 />
+
+                <LightInfin></LightInfin>
                 
                 
                 <Bottom></Bottom>
-                <HelpButton></HelpButton>
+                
                 
 
             </View>
@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'flex-start',
+      paddingTop: '0%',
     },
     
     filler: {
