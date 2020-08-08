@@ -2,8 +2,8 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ToggleButton } from 'react-native-paper';
-import Lightning from './Lightning'
-import Infinity from './Infinity'
+import Lightning from './Lightning';
+import Infinity from './Infinity';
 
 export default class LightAndInfin extends React.Component {
 
@@ -49,7 +49,8 @@ export default class LightAndInfin extends React.Component {
               </View>
             </View>
             <View style = {styles.pageContainer}>
-              <Lightning></Lightning>
+              
+              <Lightning></Lightning> 
             </View>
           </View>
         );

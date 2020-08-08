@@ -3,21 +3,17 @@ import { StyleSheet, Text, View } from 'react-native';
 import {Bottom} from './BottomNavigationBar';
 
 
-  
 
-export default class ImpactPage extends React.Component {
 
+export default class Education extends React.Component {
     render () {
         return (
-            
-            // change order/styling according to prototype
             <View style={styles.hello}>
-                <Text style= {styles.header} >NOW</Text>
-                <Text style= {styles.filler}> </Text>
+                <Text style= {styles.header}>NOW</Text>
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
-                <Text> num followers</Text>
+                <Text>num followers</Text>
+               
                 <Bottom></Bottom>
-                
 
             </View>
         );
@@ -30,20 +26,21 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'flex-start',
+      paddingTop: '0%',
     },
-    header:{
-        flexDirection: 'column',
-        alignItems: 'center',
-        fontSize: 24,
-        fontWeight: 'bold',
-        
-    },
+    
     filler: {
         fontSize: 100,    
     },
     hashtag: {
       fontSize: 22,
       fontWeight: 'bold',
+    },
+    header:{
+        paddingTop: '10%',
+        fontSize:30,
+        fontWeight:'bold',
+        paddingBottom:'5%',
     }
+
   });
