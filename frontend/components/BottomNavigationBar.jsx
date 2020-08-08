@@ -20,9 +20,10 @@ export const Bottom = () => {
       
       selectedIndex={selectedIndex}
       onSelect={index => setSelectedIndex(index)}>
+      <BottomNavigationTab icon={SearchIcon} title='SEARCH'/>
       <BottomNavigationTab icon={PersonIcon} title='PROFILE' />
      
-      <BottomNavigationTab icon={SearchIcon} title='SEARCH'/>
+      
     </BottomNavigation>
   );
 };

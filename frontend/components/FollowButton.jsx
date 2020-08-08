@@ -5,24 +5,15 @@ import ImpactPage from './Impact'
 
 
 
-const AppButton = ({title, onPress}) => (
-    
-  <TouchableOpacity 
-    //onPress={()=>navigation.navigate() } 
-    onPress={onPress}
-    style={styles.appButtonContainer}>
-    <Text style={styles.appButtonText}>{title}</Text>
-  </TouchableOpacity>
-);
-
-export const Follow = ({navigation}) => {
+export const Follow = () => {
   
-  
-
   return (
     <View style={styles.screenContainer}>
-        
-      <AppButton title = 'FOLLOW'  />
+        <TouchableOpacity 
+        onPress={null}
+        style={styles.appButtonContainer}>
+        <Text style={styles.appButtonText}>{"Follow"}</Text>
+        </TouchableOpacity>
     </View>
   );
 };

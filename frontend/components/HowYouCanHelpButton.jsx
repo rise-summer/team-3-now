@@ -5,7 +5,7 @@ export const HelpButton = () => {
         const [counter, setCounter] = React.useState(0);
         return (
             <Layout style={styles.container} level='1'>
-            <Button onPress={() => setCounter(counter + 1)}>
+            <Button onPress={() => setCounter(counter + 1)} >
             How You Can Help
             </Button>
             </Layout>
@@ -16,6 +16,7 @@ export const HelpButton = () => {
               flexDirection: 'row',
               alignItems: 'center',
               top: -150,
+              
             },
             text: {
               marginHorizontal: 8,
