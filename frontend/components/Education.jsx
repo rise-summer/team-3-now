@@ -6,6 +6,8 @@ import {Follow} from './FollowButton';
 import {HelpButton} from './HowYouCanHelpButton';
 import LightInfin from './LightAndInfin';
 
+
+
 export default class Education extends React.Component {
     render () {
         return (
