@@ -1,17 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Bottom} from './BottomNavigationBar';
+import  Header from "ImpactHeader";
 
 
 
-
-export default class Education extends React.Component {
+export default class ImpactPage extends React.Component {
     render () {
         return (
             <View style={styles.hello}>
-                <Text style= {styles.header}>NOW</Text>
-                <Text style= {styles.hashtag}> #NameOfHashtag </Text>
-                <Text>num followers</Text>
+                <Header></Header>
                
                 <Bottom></Bottom>
 
