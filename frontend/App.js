@@ -6,6 +6,8 @@ import * as eva  from '@eva-design/eva';
 import { EvaIconsPack } from '@ui-kitten/eva-icons';
 import Education from './components/Education';
 
+
+
 export default  () => (
  
     //return(

@@ -1,44 +1,69 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Bottom} from './BottomNavigationBar';
-import  Header from "ImpactHeader";
 
+import { MaterialIcons } from '@expo/vector-icons';
+
+import {SubmitResource} from './SubmitResourceButton';
 
 
 export default class ImpactPage extends React.Component {
     render () {
         return (
-            <View style={styles.hello}>
-                <Header></Header>
-               
-                <Bottom></Bottom>
+            <View style={styles.header}>
+                <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} />
+                <View>
+
+                    <Text style= {styles.headerText}>NOW</Text>
+                    <Text style= {styles.headerHashtag}> #NameOfHashtag </Text>
+                    <Text style= {styles.text}>num followers</Text>
+
+                </View>
+                <SubmitResource></SubmitResource>
+                <Text style={styles.filler}></Text>
+               <Bottom></Bottom>
+
 
             </View>
+            
         );
     }
 }
 
 const styles = StyleSheet.create({
-    hello: {
-      flex: 1,
-      flexDirection: 'column',
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      paddingTop: '0%',
-    },
-    
-    filler: {
-        fontSize: 100,    
-    },
-    hashtag: {
-      fontSize: 22,
-      fontWeight: 'bold',
-    },
-    header:{
-        paddingTop: '10%',
-        fontSize:30,
-        fontWeight:'bold',
-        paddingBottom:'5%',
-    }
-
-  });
+    header: {
+        flex:1,
+        paddingTop: '15%',
+        //flexDirection: 'column',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+       
+      },
+      headerText: {
+        textAlign:'center',
+        justifyContent: 'center', 
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: '#333',
+        paddingBottom: '5%',
+        
+      },
+      text: {
+        textAlign:'center',
+        paddingBottom:'3%',   
+      },
+      filler: {
+        fontSize: 450,    
+      },
+      headerHashtag: {
+        textAlign:'center',  
+        justifyContent: 'center',
+          fontSize: 22,
+          fontWeight: 'bold',
+        },
+      icon: {
+        paddingTop: '18%',
+        position:'absolute',
+        left: 16,
+      }
+    });

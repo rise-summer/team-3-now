@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Button, StyleSheet, TouchableOpacity, Text, navigate } from "react-native";
 import {createStateNavigator} from 'react-navigation'
-import ImpactPage from './Impact'
+
 
 
 
