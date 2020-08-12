@@ -33,7 +33,6 @@ const styles = StyleSheet.create({
   appButtonText: {
     fontSize: 14,
     color: "#fff",
-    //fontWeight: "bold",
     alignSelf: "center",
     textTransform: "uppercase"
   }

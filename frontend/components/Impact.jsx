@@ -1,14 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Bottom} from './BottomNavigationBar';
+// import {Bottom} from './BottomTab ';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
 import {SubmitResource} from './SubmitResourceButton';
 
 
-export default class ImpactPage extends React.Component {
-    render () {
+const ImpactPage =({navigation}) => {
+   // render () {
         return (
             <View style={styles.header}>
                 <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} />
@@ -21,14 +21,18 @@ export default class ImpactPage extends React.Component {
                 </View>
                 <SubmitResource></SubmitResource>
                 <Text style={styles.filler}></Text>
-               <Bottom></Bottom>
+                {/* <Bottom></Bottom> */}
 
 
             </View>
             
         );
-    }
+   // }
+
 }
+
+export default ImpactPage;
+
 
 const styles = StyleSheet.create({
     header: {
