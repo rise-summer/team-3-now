@@ -19,9 +19,9 @@ export const Follow = () => {
           visible={modalVisible}
           onRequestClose={() => {
               Alert.alert("Modal has been closed.");
-          }}
-        >
-        <View >
+          }}>
+
+        <View>
           <View style={styles.modalView}>
                      
             <Text style={styles.text}> You are now following</Text>
@@ -31,20 +31,18 @@ export const Follow = () => {
 
               <View style={{ flexDirection: 'row'}}>
                   <CheckBox
-                  
                   value={isSelected}
                   onValueChange={setSelection}
                   color= "black"
                   style={{alignSelf:"center"}}
                   />
                   <Text style={styles.CheckBoxText}>Enable push notifications to receive breaking news updates about this cause</Text>
-                </View>
+              </View>
 
                 
             </View>
                <View style={styles.SaveButtonContainer}>
                   < TouchableOpacity 
-                      
                       onPress={null}>
                   <Text style={styles.SaveButtonText}>Save</Text>
                   </TouchableOpacity>
@@ -66,12 +64,12 @@ export const Follow = () => {
       </Modal>
 
       <TouchableHighlight
-        style={styles.appButtonContainer}
+        style={styles.FollowButtonContainer}
         onPress={() => {
           setModalVisible(true);
         }}
       >
-        <Text style={styles.appButtonText}>Follow</Text>
+        <Text style={styles.FollowButtonText}>Follow</Text>
       </TouchableHighlight>
         
    </View>
@@ -101,14 +99,14 @@ const styles = StyleSheet.create({
     position:"absolute"
     
   },
-  appButtonContainer: {
+  FollowButtonContainer: {
     backgroundColor: "#3ECCBB",
     color: "white",
     borderRadius: 18,
     paddingVertical: 10,
     paddingHorizontal: 25
   },
-  appButtonText: {
+  FollowButtonText: {
     fontSize: 14,
     color: "#fff",
     alignSelf: "center",
@@ -118,7 +116,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     fontSize:30,
     marginTop:-130,
-    
     color:"#3ECCBB",
   },
   hashtagText:{
@@ -153,13 +150,6 @@ const styles = StyleSheet.create({
     marginLeft:5,
     flexShrink:1,
     fontSize:18
-  },
-  openButton: {
-    backgroundColor: "#3ECCBB",
-    borderRadius: 20,
-    paddingVertical: 10,
-    paddingHorizontal: 25,
-    elevation: 6
   },
   icon:{
     ...StyleSheet.absoluteFillObject,
