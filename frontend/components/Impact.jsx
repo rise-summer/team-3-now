@@ -5,6 +5,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 import {SubmitResource} from './SubmitResourceButton';
+import Cards from './Cards';
 
 
 const ImpactPage =({navigation}) => {
@@ -20,6 +21,9 @@ const ImpactPage =({navigation}) => {
 
                 </View>
                 <SubmitResource></SubmitResource>
+                <View style={styles.cards}>
+                  <Cards></Cards>
+                </View>
                 <Text style={styles.filler}></Text>
                 {/* <Bottom></Bottom> */}
 
@@ -64,7 +68,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
           fontSize: 22,
           fontWeight: 'bold',
-        },
+      },
+      cards: {
+        paddingTop: '10%',
+      },
       icon: {
         paddingTop: '18%',
         position:'absolute',
