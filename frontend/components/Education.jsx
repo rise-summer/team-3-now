@@ -4,23 +4,27 @@ import { StyleSheet, Text, View,Button, TouchableOpacity } from 'react-native';
 import {WebView} from 'react-native-webview';
 import Bottom from './BottomTab';
 import {Follow} from './FollowButton';
+import {Resource} from './ResourceButton';
 import {HelpButton} from './HowYouCanHelpButton';
 import LightInfin from './LightAndInfin';
 
 
  const Education =({navigation}) => {
-
    // render () {
         return (
             <View style={styles.hello}>
                 
                 {/* <Text style= {styles.filler}> </Text> */}
-                <Text style= {styles.header}>NOW</Text>
+                
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
                 <Text>num followers</Text>
-                <Follow></Follow>
-
-
+                
+                <View  style={{flexDirection: 'row'}}>
+                    <Resource></Resource>
+                    <Follow></Follow>
+                </View>
+                <Text style={{paddingBottom:20}}></Text>
+                
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
                   
@@ -28,12 +32,13 @@ import LightInfin from './LightAndInfin';
                 />
 
                 <LightInfin></LightInfin>
-                {/* <Button title= 'How You Can Help' onPress={()=> navigation.navigate('ImpactPage')} style={styles.appButtonContainer} /> */}
+
                 <TouchableOpacity
                    onPress={()=> navigation.navigate('ImpactPage')} 
                    style={styles.appButtonContainer} >
                   <Text style={styles.appButtonText}>{"How You Can Help"}</Text>
                 </TouchableOpacity> 
+                
                 <Bottom></Bottom>
                 
                 {/* <HelpButton ></HelpButton> */}
@@ -69,7 +74,7 @@ const styles = StyleSheet.create({
     },
     appButtonContainer: {
         //elevation: 8,
-        backgroundColor: "black",
+        backgroundColor: "#ED254E",
         borderRadius: 35,
         paddingVertical: 14,
         paddingHorizontal: 40

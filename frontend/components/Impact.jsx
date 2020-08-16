@@ -4,22 +4,20 @@ import { StyleSheet, Text, View } from 'react-native';
 
 import { MaterialIcons } from '@expo/vector-icons';
 
-import {SubmitResource} from './SubmitResourceButton';
-
+import {Resource} from './ResourceButton';
 
 const ImpactPage =({navigation}) => {
    // render () {
         return (
             <View style={styles.header}>
-                <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} />
+                {/* <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} /> */}
                 <View>
 
-                    <Text style= {styles.headerText}>NOW</Text>
                     <Text style= {styles.headerHashtag}> #NameOfHashtag </Text>
                     <Text style= {styles.text}>num followers</Text>
 
                 </View>
-                <SubmitResource></SubmitResource>
+                {/* <Resource></Resource> */}
                 <Text style={styles.filler}></Text>
                 {/* <Bottom></Bottom> */}
 

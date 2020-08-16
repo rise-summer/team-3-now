@@ -19,8 +19,9 @@ const Stack = createStackNavigator();
 
       <NavigationContainer>
         <Stack.Navigator >
-           <Stack.Screen  options={{headerShown: false}} name="Education" component={Education}/>
-           <Stack.Screen name="ImpactPage" component={ImpactPage}/>
+           <Stack.Screen  options={{title: 'NOW'}} name="Education" component={Education}/>
+           {/* <Stack.Screen  options={{headerShown:false}} name="Education" component={Education}/> */}
+           <Stack.Screen options={{title: 'NOW'}} name="ImpactPage" component={ImpactPage}/>
        </Stack.Navigator>
 
       </NavigationContainer>
