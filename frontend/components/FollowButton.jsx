@@ -3,14 +3,16 @@ import { View, CheckBox, StyleSheet, TouchableOpacity, TouchableHighlight,Text, 
 import {createStateNavigator} from 'react-navigation'
 import ImpactPage from './Impact'
 // import { Ionicons } from '@expo/vector-icons';
-import { IconButton, Colors } from 'react-native-paper';
+import { IconButton, Colors, Checkbox } from 'react-native-paper';
 
 
 
 
 export const Follow = () => {
+
   const [modalVisible, setModalVisible, isSelected, setSelection] = useState(false);
 
+  
   return (
     <View style={styles.screenContainer}>
         <Modal
