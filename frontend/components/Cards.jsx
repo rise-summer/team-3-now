@@ -1,9 +1,9 @@
 import React from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ToggleButton, Card, Text, Title } from 'react-native-paper';
+import { Card, Text, Title } from 'react-native-paper';
 
-// TO DO: Add onPress events to respective pages for each card 
+// TO DO: Add onPress events to navigate to respective pages for each card 
 
 export default class Cards extends React.Component {
     
@@ -13,10 +13,10 @@ export default class Cards extends React.Component {
     render () {
         return (
             <View style={styles.container}>
-                <View style = {styles.buttonContainer}>
-                    <TouchableOpacity style={styles.buttons}> 
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                <View style = {styles.cardContainer}>
+                    <TouchableOpacity style={styles.touchArea}> 
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
                                     <Icon name="pencil" size={25}></Icon>
                                 </Card.Content>
@@ -26,12 +26,15 @@ export default class Cards extends React.Component {
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
                                 </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
+                                </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttons}>
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                    <TouchableOpacity style={styles.touchArea}>
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
                                     <Icon name="email" size={25}></Icon>
                                 </Card.Content>
@@ -41,14 +44,17 @@ export default class Cards extends React.Component {
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
                                 </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
+                                </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
                 </View>
-                <View style = {styles.buttonContainer}>
-                    <TouchableOpacity style={styles.buttons}> 
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                <View style = {styles.cardContainer}>
+                    <TouchableOpacity style={styles.touchArea}> 
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
                                     <Icon name="star" size={25}></Icon>
                                 </Card.Content>
@@ -58,12 +64,15 @@ export default class Cards extends React.Component {
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
                                 </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
+                                </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttons}>
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                    <TouchableOpacity style={styles.touchArea}>
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
                                     <Icon name="calendar" size={25}></Icon>
                                 </Card.Content>
@@ -73,14 +82,17 @@ export default class Cards extends React.Component {
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
                                 </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
+                                </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
                 </View>
-                <View style = {styles.buttonContainer}>
-                    <TouchableOpacity style={styles.buttons}> 
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                <View style = {styles.cardContainer}>
+                    <TouchableOpacity style={styles.touchArea}> 
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
                                     <Icon name="heart" size={25}></Icon>
                                 </Card.Content>
@@ -90,20 +102,26 @@ export default class Cards extends React.Component {
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
                                 </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
+                                </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.buttons}>
-                        <View style={styles.card}>
-                            <Card style={styles.test}>
+                    <TouchableOpacity style={styles.touchArea}>
+                        <View style={styles.cardView}>
+                            <Card style={styles.cards}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="mail" size={25}></Icon>
+                                    <Icon name="newspaper" size={25}></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>Infographics</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text>...</Text>
+                                </Card.Content>
+                                <Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
                                 </Card.Content>
                             </Card>
                         </View>
@@ -115,14 +133,14 @@ export default class Cards extends React.Component {
 }
 
 const styles = StyleSheet.create({
-    buttonContainer: {
+    cardContainer: {
       flexDirection: 'row',
       paddingTop: '0%',
     },
-    card: {
+    cardView: {
       alignItems: 'center',  
     },
-    buttons: {
+    touchArea: {
       width: '50%',
       paddingTop: '5%',
     },
@@ -137,8 +155,8 @@ const styles = StyleSheet.create({
     cardRows: {
       paddingTop: '5%',  
     },
-    test: {
-      width: '80%',  
+    cards: {
+      width: '82%',  
     },
     pageContainer: {
       paddingTop: '20%',
