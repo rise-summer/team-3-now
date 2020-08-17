@@ -16,12 +16,6 @@ export const Resource = () => {
   const [description, setDescription] = useState(' ');
    return (
 
-
-
-
-    
-
-
           <View style={styles.screenContainer}>
             
             <Modal

@@ -39,9 +39,7 @@ import LightInfin from './LightAndInfin';
                   <Text style={styles.appButtonText}>{"How You Can Help"}</Text>
                 </TouchableOpacity> 
                 
-                <Bottom></Bottom>
-                
-                {/* <HelpButton ></HelpButton> */}
+                <Bottom></Bottom> 
 
             </View>
         );

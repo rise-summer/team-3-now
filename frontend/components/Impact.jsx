@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-// import {Bottom} from './BottomTab ';
-
+import Bottom from './BottomTab';
 import { MaterialIcons } from '@expo/vector-icons';
-
 import {Resource} from './ResourceButton';
+import Cards from './Cards';
+
 
 const ImpactPage =({navigation}) => {
    // render () {
@@ -16,10 +16,15 @@ const ImpactPage =({navigation}) => {
                     <Text style= {styles.headerHashtag}> #NameOfHashtag </Text>
                     <Text style= {styles.text}>num followers</Text>
 
+                </View>                
+                <View style={styles.cards}>
+                  <Cards></Cards>
                 </View>
-                {/* <Resource></Resource> */}
                 <Text style={styles.filler}></Text>
-                {/* <Bottom></Bottom> */}
+                {/* <View>
+                  <Bottom></Bottom>
+                </View> */}
+                
 
 
             </View>
@@ -62,7 +67,10 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
           fontSize: 22,
           fontWeight: 'bold',
-        },
+      },
+      cards: {
+        paddingTop: '10%',
+      },
       icon: {
         paddingTop: '18%',
         position:'absolute',
