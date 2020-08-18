@@ -1,13 +1,16 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import Education from './Education';
 
-export default function Search () {
+
+
+export default function Search ({navigation}) {
     return (
       <View style={styles.container}>
         <Text>Search Screen</Text>
         <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
+          title="Click Here to go to Education page"
+          onPress={() => navigation.navigate('Education')}
         />
       </View>
     );

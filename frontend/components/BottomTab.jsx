@@ -1,21 +1,18 @@
 import * as React from 'react';
 import { Text, View } from 'react-native';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Profile  from "./ProfilePage";
 import  Search from "./SearchPage";
 
-
-
-
+import Education from './Education';
+import ImpactPage from './Impact';
 
 
 const Tab = createMaterialBottomTabNavigator();
 
-
-
+const Stack = createStackNavigator();
 
 
 export default function Bottom() {
@@ -23,28 +20,35 @@ export default function Bottom() {
     
     <Tab.Navigator
       initialRouteName="Search"
-      activeColor="black"
-      labelStyle={{ fontSize: 12 }}
+      activeColor= "#3ECCBB"
+      inactiveColor="gray"
+      barStyle= { {backgroundColor: "white"}}
       style={{ backgroundColor: 'white' }}>
       
-        <Tab.Screen
-          name="Search"
-          component={Search}
+        <Tab.Screen 
+          name="Search" 
           options={{
-              tabBarLabel: 'Search',
-              tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home" color={color} size={26} />
-              ),
-          }}
-        />
+            //tabBarLabel: 'Search',
+            tabBarIcon: ({ color }) => (
+                <Ionicons name="md-search" color={color} size={26} />
+            ),
+          }}> 
+
+        {()=>(
+          <Stack.Navigator>
+              <Stack.Screen options={{title: 'NOW'}} name="Search" component={Search}/>
+              <Stack.Screen options={{title: 'NOW'}} name="Education" component={Education}/>
+              <Stack.Screen options={{title: 'NOW'}} name="ImpactPage" component={ImpactPage} />
+            </Stack.Navigator>
+        )}
+        </Tab.Screen>
 
         <Tab.Screen
           name="Profile"
           component={Profile}
           options={{
-              tabBarLabel: 'Profile',
               tabBarIcon: ({ color }) => (
-                <MaterialCommunityIcons name="home" color={color} size={26} />
+                <Ionicons name="md-person" color={color} size={26} />
               ),
           }}
         />

@@ -1,33 +1,27 @@
 import React from 'react';
-import { StyleSheet, Text, View,Button, TouchableOpacity } from 'react-native';
-
+import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {WebView} from 'react-native-webview';
-import Bottom from './BottomTab';
 import {Follow} from './FollowButton';
 import {Resource} from './ResourceButton';
-import {HelpButton} from './HowYouCanHelpButton';
 import LightInfin from './LightAndInfin';
 
-
  const Education =({navigation}) => {
-   // render () {
-        return (
+          return (
             <View style={styles.hello}>
                 
-                {/* <Text style= {styles.filler}> </Text> */}
-                
+                <Text style= {{fontSize:100}}> </Text>
                 <Text style= {styles.hashtag}> #NameOfHashtag </Text>
                 <Text>num followers</Text>
                 
-                <View  style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row'}}>
                     <Resource></Resource>
                     <Follow></Follow>
                 </View>
+
                 <Text style={{paddingBottom:20}}></Text>
                 
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
-                  
                     style={{height:0, width:300}}
                 />
 
@@ -35,15 +29,12 @@ import LightInfin from './LightAndInfin';
 
                 <TouchableOpacity
                    onPress={()=> navigation.navigate('ImpactPage')} 
-                   style={styles.appButtonContainer} >
-                  <Text style={styles.appButtonText}>{"How You Can Help"}</Text>
+                   style={styles.HelpButtonContainer} >
+                  <Text style={styles.HelpButtonText}>{"How You Can Help"}</Text>
                 </TouchableOpacity> 
                 
-                <Bottom></Bottom> 
-
             </View>
         );
-   // }
 }
 
 export default Education;
@@ -56,10 +47,6 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       paddingTop: '0%',
     },
-    
-    filler: {
-        fontSize: 100,    
-    },
     hashtag: {
       fontSize: 22,
       fontWeight: 'bold',
@@ -70,17 +57,16 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         paddingBottom:'5%',
     },
-    appButtonContainer: {
-        //elevation: 8,
+    HelpButtonContainer: {
+       
         backgroundColor: "#ED254E",
         borderRadius: 35,
         paddingVertical: 14,
         paddingHorizontal: 40
-      },
-      appButtonText: {
+    },
+    HelpButtonText: {
         fontSize: 14,
         color: "#fff",
         alignSelf: "center",
-      }   
-
-  });
+    }   
+});

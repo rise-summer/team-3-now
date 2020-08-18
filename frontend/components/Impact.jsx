@@ -1,37 +1,31 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Bottom from './BottomTab';
-import { MaterialIcons } from '@expo/vector-icons';
 import {Resource} from './ResourceButton';
 import Cards from './Cards';
 
 
 const ImpactPage =({navigation}) => {
-   // render () {
-        return (
+           return (
             <View style={styles.header}>
                 {/* <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} /> */}
                 <View>
-
                     <Text style= {styles.headerHashtag}> #NameOfHashtag </Text>
                     <Text style= {styles.text}>num followers</Text>
+                    <View style={{justifyContent: 'center'}}>
+                          <Resource></Resource>
+                    </View>
+                </View> 
 
-                </View>                
                 <View style={styles.cards}>
                   <Cards></Cards>
                 </View>
                 <Text style={styles.filler}></Text>
-                {/* <View>
-                  <Bottom></Bottom>
-                </View> */}
+               
                 
-
 
             </View>
             
         );
-   // }
-
 }
 
 export default ImpactPage;

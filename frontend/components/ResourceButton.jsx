@@ -1,19 +1,17 @@
 import React, { useState } from "react";
 import { View, CheckBox, StyleSheet, TouchableOpacity, TextInput ,TouchableHighlight,Text, Modal, Picker } from "react-native";
-import {createStateNavigator} from 'react-navigation';
 import { KeyboardAwareScrollView  } from "react-native-keyboard-aware-scroll-view";
-import ImpactPage from './Impact'
-// import { Ionicons } from '@expo/vector-icons';
 import { IconButton, Colors } from 'react-native-paper';
 
 
-
 export const Resource = () => {
+
   const [modalVisible, setModalVisible, isSelected, setSelection] = useState(false);
   const [selectedValue, setSelectedValue] = useState("Donation Fund");
   const [title, setTitle] = useState(' ');
   const [link, setLink] = useState(' ');
   const [description, setDescription] = useState(' ');
+  
    return (
 
           <View style={styles.screenContainer}>
@@ -93,9 +91,6 @@ export const Resource = () => {
                         style={styles.icon}
                         onPress={() => {setModalVisible(!modalVisible);}}/>
 
-
-                
-                
                 </View>
 
                 </KeyboardAwareScrollView>   
@@ -108,15 +103,11 @@ export const Resource = () => {
             style={styles.ResourceButtonContainer}
             onPress={() => {
               setModalVisible(true);
-            }}
-          >
+            }}>
             <Text style={styles.ResourceButtonText}>Resource</Text>
           </TouchableHighlight>
             
         </View>
-
-
-    
     
   );
 };
@@ -135,7 +126,7 @@ const styles = StyleSheet.create({
     borderRadius:20,
     paddingLeft:20,
     paddingRight:20,
-    //paddingHorizontal:100
+    
  },
  DescriptionInput: {
     height: 100,
@@ -176,9 +167,7 @@ const styles = StyleSheet.create({
      
   },
 
-  
   submitText:{
-    // flexDirection:"column",
     justifyContent:"center",//Centered vertically
     //alignItems: 'center',// Centered horizontally
     fontSize:30,
@@ -206,7 +195,6 @@ const styles = StyleSheet.create({
     paddingVertical:130,
     paddingHorizontal: 30,
   
-    //padding: 35,
     alignItems: "center",
     shadowColor: "#000",
     shadowOffset: {
@@ -220,16 +208,13 @@ const styles = StyleSheet.create({
   CheckBoxText:{
     color: "black",
     paddingRight:15,
-   // marginTop:5,
     marginLeft:5,
-   // flexShrink:1,
     fontSize:18
   
   },
   icon:{
     ...StyleSheet.absoluteFillObject,
     color:"black",
-    //alignSelf: 'flex-end',
     marginTop: 15,
     paddingLeft: 15,
     position: 'absolute',
