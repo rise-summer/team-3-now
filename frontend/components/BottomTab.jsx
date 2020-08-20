@@ -10,8 +10,24 @@ import Education from './Education';
 import ImpactPage from './Impact';
 
 
-const Tab = createMaterialBottomTabNavigator();
 
+function MenuIcon() {
+  return (
+    <View style= {{right:30,bottom:30,position:'absolute'}}>
+      <Ionicons name="md-menu" color={'#049F76'} size={30}/>
+    </View>
+    
+  );
+}
+function HeaderText(){
+  return (
+    <Text style={{fontWeight:"bold",fontSize:25,left:30,bottom:30,position:'absolute'}}> NOW</Text>
+  );
+
+}
+
+
+const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
 
@@ -28,7 +44,6 @@ export default function Bottom() {
         <Tab.Screen 
           name="Search" 
           options={{
-            //tabBarLabel: 'Search',
             tabBarIcon: ({ color }) => (
                 <Ionicons name="md-search" color={color} size={26} />
             ),
@@ -36,9 +51,9 @@ export default function Bottom() {
 
         {()=>(
           <Stack.Navigator>
-              <Stack.Screen options={{title: 'NOW'}} name="Search" component={Search}/>
-              <Stack.Screen options={{title: 'NOW'}} name="Education" component={Education}/>
-              <Stack.Screen options={{title: 'NOW'}} name="ImpactPage" component={ImpactPage} />
+              <Stack.Screen options={{headerTitle:false ,headerLeft: props => <HeaderText {...props}/> , headerRight:props => <MenuIcon {...props} />}} name="Search" component={Search}/>
+              <Stack.Screen options={{headerTitle:false ,headerLeft: props => <HeaderText {...props}/> , headerRight:props => <MenuIcon {...props} />}} name="Education" component={Education}/>
+              <Stack.Screen options={{headerTitle:false ,headerLeft: props => <HeaderText {...props}/> , headerRight:props => <MenuIcon {...props} />}} name="ImpactPage" component={ImpactPage} />
             </Stack.Navigator>
         )}
         </Tab.Screen>

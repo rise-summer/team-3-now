@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {WebView} from 'react-native-webview';
 import {Follow} from './FollowButton';
 import {Resource} from './ResourceButton';
 import LightInfin from './LightAndInfin';
+import {CauseContext} from './CauseContext';
 
  const Education =({navigation}) => {
-          return (
+         //const [causes, setCauses]= useContext(CauseContext);
+         return (
+            
             <View style={styles.hello}>
                 
                 <Text style= {{fontSize:100}}> </Text>
-                <Text style= {styles.hashtag}> #NameOfHashtag </Text>
+                <Text style= {styles.hashtag}> #hashtag </Text>
                 <Text>num followers</Text>
                 
                 <View style={{flexDirection: 'row'}}>
@@ -34,6 +37,7 @@ import LightInfin from './LightAndInfin';
                 </TouchableOpacity> 
                 
             </View>
+            
         );
 }
 

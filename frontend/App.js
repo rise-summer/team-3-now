@@ -1,15 +1,21 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import Bottom from './components/BottomTab';
-
+import {CauseProvider} from './components/CauseContext';
 
 const App = () => {
     return (
+      <CauseProvider>
 
-      <NavigationContainer>
-        <Bottom ></Bottom>
-      </NavigationContainer>
+        <NavigationContainer>
+          
+          <Bottom ></Bottom>
+
+        </NavigationContainer>
+
+      </CauseProvider>
+      
   
     );
 
