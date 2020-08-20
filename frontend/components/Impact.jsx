@@ -1,15 +1,18 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {Resource} from './ResourceButton';
 import Cards from './Cards';
-
+import {CauseProvider, CauseContext,CauseDispatchContext} from './CauseContext';
 
 const ImpactPage =({navigation}) => {
+          const CauseDetails = useContext(CauseContext);
+          const setCauseDetails = useContext(CauseDispatchContext);
+
            return (
             <View style={styles.header}>
                 {/* <MaterialIcons  name="arrow-back" size={28} onPress={null} style={styles.icon} /> */}
                 <View>
-                    <Text style= {styles.headerHashtag}> #NameOfHashtag </Text>
+                    <Text style= {styles.headerHashtag}> {CauseDetails.cause2.hashtagName}</Text>
                     <Text style= {styles.text}>num followers</Text>
                     <View style={{justifyContent: 'center'}}>
                           <Resource></Resource>

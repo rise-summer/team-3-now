@@ -4,16 +4,19 @@ import {WebView} from 'react-native-webview';
 import {Follow} from './FollowButton';
 import {Resource} from './ResourceButton';
 import LightInfin from './LightAndInfin';
-import {CauseContext} from './CauseContext';
+import {CauseProvider, CauseContext,CauseDispatchContext} from './CauseContext';
+
 
  const Education =({navigation}) => {
-         //const [causes, setCauses]= useContext(CauseContext);
+         
+          const CauseDetails = useContext(CauseContext);
+          const setCauseDetails = useContext(CauseDispatchContext);
          return (
             
             <View style={styles.hello}>
                 
                 <Text style= {{fontSize:100}}> </Text>
-                <Text style= {styles.hashtag}> #hashtag </Text>
+                <Text style= {styles.hashtag}> {CauseDetails.cause2.hashtagName} </Text>
                 <Text>num followers</Text>
                 
                 <View style={{flexDirection: 'row'}}>
