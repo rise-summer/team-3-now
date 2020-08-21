@@ -116,6 +116,10 @@ const styles = StyleSheet.create({
   screenContainer: {
     justifyContent: "center",
     padding: 10,
+    shadowColor: '#000000',
+    shadowOffset: { height: 1, width: 1 }, 
+    shadowOpacity: 100, 
+    shadowRadius: 5,
 
   },
   input: {

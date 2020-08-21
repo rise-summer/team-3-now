@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Resource} from './ResourceButton';
+import {Resource} from '../General/ResourceButton';
 import Cards from './Cards';
 
 

@@ -74,7 +74,11 @@ export const Follow = () => {
 const styles = StyleSheet.create({
   screenContainer: {
     justifyContent: "center",
-    padding: 10
+    padding: 10,
+    shadowColor: '#000000',
+    shadowOffset: { height: 1, width: 1 }, 
+    shadowOpacity: 100, 
+    shadowRadius: 5,
   },
   SaveButtonText:{
     fontWeight:"bold",

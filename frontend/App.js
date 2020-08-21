@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Bottom from './components/BottomTab';
+import Bottom from './components/General/BottomTab';
 
 
 const App = () => {

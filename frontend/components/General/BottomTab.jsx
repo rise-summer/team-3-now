@@ -3,11 +3,11 @@ import { Text, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import Profile  from "./ProfilePage";
-import  Search from "./SearchPage";
+import Profile  from "../Profile/ProfilePage";
+import  Search from "../Search/SearchPage";
 
-import Education from './Education';
-import ImpactPage from './Impact';
+import Education from '../Education/Education';
+import ImpactPage from '../Impact/Impact';
 
 
 const Tab = createMaterialBottomTabNavigator();

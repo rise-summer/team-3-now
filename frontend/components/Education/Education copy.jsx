@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {WebView} from 'react-native-webview';
-import {Follow} from './FollowButton';
-import {Resource} from './ResourceButton';
+import {Follow} from '../General/FollowButton';
+import {Resource} from '../General/ResourceButton';
 import LightInfin from './LightAndInfin';
+
+// education template
 
  const Education =({navigation}) => {
           return (
@@ -20,10 +22,10 @@ import LightInfin from './LightAndInfin';
 
                 <Text style={{paddingBottom:20}}></Text>
                 
-                <WebView
+                {/* <WebView
                     source={{html: require('./Globe/globe.js')()}}
                     style={{height:0, width:300}}
-                />
+                /> */}
 
                 <LightInfin></LightInfin>
 

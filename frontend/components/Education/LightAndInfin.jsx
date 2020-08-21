@@ -28,7 +28,7 @@ export default class LightAndInfin extends React.Component {
               <View style={styles.buttons}>
                 <View style={styles.icon}>
                   <ToggleButton
-                    icon="flash"
+                    icon="light"
                     value="light"
                     size={30}
                     status={this.state.light}

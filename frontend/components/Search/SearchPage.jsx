@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
-import Education from './Education';
+import Education from '../Education/Education';
 
 
 
