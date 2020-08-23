@@ -3,6 +3,7 @@ import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
 import {Follow} from './FollowButton';
 import {Resource} from '../General/ResourceButton';
 import LightInfin from './LightAndInfin';
+import LightAndInfin from './LightAndInfin';
 
 // blm education page
 
@@ -23,7 +24,7 @@ import LightInfin from './LightAndInfin';
             <Text style={{paddingBottom:20}}></Text>
 
 
-            <LightInfin></LightInfin>
+            <LightAndInfin></LightAndInfin>
 
             <TouchableOpacity
                onPress={()=> navigation.navigate('ImpactPage')} 

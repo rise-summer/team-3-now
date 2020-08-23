@@ -16,15 +16,15 @@ export default class Cards extends React.Component {
                 <View style = {styles.cardContainer}>
                     <TouchableOpacity style={styles.touchArea}> 
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
+                            <Card style={styles.cardsGreen}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="pencil" size={25}></Icon>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Petitions</Text>
+                                    <Icon name="pencil" size={25} color='#3ECCBB'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.greenText}>Petitions</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -34,15 +34,15 @@ export default class Cards extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.touchArea}>
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
+                            <Card style={styles.cardsBlue}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="email" size={25}></Icon>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Email</Text>
+                                    <Icon name="email" size={25} color='#8390FA'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.blueText}>Email</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -54,15 +54,15 @@ export default class Cards extends React.Component {
                 <View style = {styles.cardContainer}>
                     <TouchableOpacity style={styles.touchArea}> 
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
+                            <Card style={styles.cardsBlue}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="star" size={25}></Icon>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Donation Funds</Text>
+                                    <Icon name="star" size={25} color='#8390FA'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.blueText}>Donation Funds</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -72,15 +72,15 @@ export default class Cards extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.touchArea}>
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
-                                <Card.Content style={styles.cardInfo}>
-                                    <Icon name="calendar" size={25}></Icon>
+                            <Card style={styles.cardsGreen}>
+                            <   Card.Content style={styles.cardInfo}>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Events</Text>
+                                    <Icon name="calendar" size={25} color='#3ECCBB'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.greenText}>Events</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -92,15 +92,15 @@ export default class Cards extends React.Component {
                 <View style = {styles.cardContainer}>
                     <TouchableOpacity style={styles.touchArea}> 
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
+                            <Card style={styles.cardsGreen}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="heart" size={25}></Icon>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Volunteer</Text>
+                                    <Icon name="heart" size={25} color='#3ECCBB'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.greenText}>Volunteer</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -110,15 +110,15 @@ export default class Cards extends React.Component {
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.touchArea}>
                         <View style={styles.cardView}>
-                            <Card style={styles.cards}>
+                            <Card style={styles.cardsBlue}>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="newspaper" size={25}></Icon>
+                                    <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Infographics</Text>
+                                    <Icon name="newspaper" size={25} color='#8390FA'></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>...</Text>
+                                    <Text style={styles.blueText}>Infographics</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
       paddingTop: '0%',
     },
     cardView: {
-      alignItems: 'center',  
+      alignItems: 'center', 
     },
     touchArea: {
       width: '50%',
@@ -147,7 +147,6 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: 'gainsboro', 
     },
     cardInfo: {
       alignItems: 'center',  
@@ -155,10 +154,23 @@ const styles = StyleSheet.create({
     cardRows: {
       paddingTop: '5%',  
     },
-    cards: {
-      width: '82%',  
+    cardsGreen: {
+      width: '82%', 
+      borderWidth: 2,
+      borderColor: '#3ECCBB',
+    },
+    cardsBlue: {
+      width: '82%', 
+      borderWidth: 2,
+      borderColor: '#8390FA',
     },
     pageContainer: {
       paddingTop: '20%',
+    },
+    blueText: {
+        color: '#8390FA',
+    },
+    greenText: {
+        color: '#3ECCBB',
     }
   });
