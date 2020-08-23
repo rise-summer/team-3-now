@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
-import Bottom from './components/BottomTab';
+import Bottom from './components/General/BottomTab';
 import {CauseProvider} from './components/CauseContext';
 
 const App = () => {
