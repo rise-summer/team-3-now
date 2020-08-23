@@ -1,11 +1,12 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native';
 //import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Card, Text} from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons'; 
 
 
-
+// Scroll View??
+// Add onPress event for save
 // TO DO: Add onPress events to navigate to respective pages for each card 
 
 export default class PetitionCards extends React.Component{
@@ -15,7 +16,7 @@ export default class PetitionCards extends React.Component{
 
     render () {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <View style = {styles.cardContainer}>
                     <TouchableOpacity style={styles.touchArea}> 
                         <View style={styles.cardView}>
@@ -32,12 +33,19 @@ export default class PetitionCards extends React.Component{
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                        <AntDesign name="upcircleo" size={15} color="black" /> 
-                                        <Text>5</Text>
-                                        <AntDesign name="downcircleo" size={15} color="black" />
-                                        <AntDesign name="hearto" size={15} color="black" />
-                                        <AntDesign name="sharealt" size={15} color="black" />
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="upcircleo" size={15} color="black" /> 
+                                            <Text> 5 </Text>
+                                            <AntDesign name="downcircleo" size={15} color="black" />
                                         </View>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="exclamationcircleo" size={15} color="black" > report  </AntDesign>
+                                            <AntDesign name="sharealt" size={15} color="black" > share  </AntDesign>
+                                            <AntDesign name="hearto" size={15} color="black" > save  </AntDesign>  
+
+                                        </View>
+
+                                    </View>
                                 </Card.Content>
                             </Card>
                         </View>
@@ -58,13 +66,19 @@ export default class PetitionCards extends React.Component{
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                        <AntDesign name="upcircleo" size={15} color="black" /> 
-                                        <Text>5</Text>
-                                        <AntDesign name="downcircleo" size={15} color="black" />
-                                        <AntDesign name="hearto" size={15} color="black" />
-                                        <AntDesign name="sharealt" size={15} color="black" />
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="upcircleo" size={15} color="black" /> 
+                                            <Text> 5 </Text>
+                                            <AntDesign name="downcircleo" size={15} color="black" />
                                         </View>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="exclamationcircleo" size={15} color="black" > report  </AntDesign>
+                                            <AntDesign name="sharealt" size={15} color="black" > share  </AntDesign>
+                                            <AntDesign name="hearto" size={15} color="black" > save  </AntDesign>
+                                        </View>
+
+                                    </View>
                                 </Card.Content>
                             </Card>
                         </View>
@@ -85,13 +99,19 @@ export default class PetitionCards extends React.Component{
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                        <AntDesign name="upcircleo" size={15} color="black" /> 
-                                        <Text>5</Text>
-                                        <AntDesign name="downcircleo" size={15} color="black" />
-                                        <AntDesign name="hearto" size={15} color="black" />
-                                        <AntDesign name="sharealt" size={15} color="black" />
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="upcircleo" size={15} color="black" /> 
+                                            <Text> 5 </Text>
+                                            <AntDesign name="downcircleo" size={15} color="black" />
                                         </View>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="exclamationcircleo" size={15} color="black" > report  </AntDesign>
+                                            <AntDesign name="sharealt" size={15} color="black" > share  </AntDesign>
+                                            <AntDesign name="hearto" size={15} color="black" > save  </AntDesign>
+                                        </View>
+
+                                    </View>
                                 </Card.Content>
                             </Card>
                         </View>
@@ -112,19 +132,25 @@ export default class PetitionCards extends React.Component{
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                        <AntDesign name="upcircleo" size={15} color="black" /> 
-                                        <Text>5</Text>
-                                        <AntDesign name="downcircleo" size={15} color="black" />
-                                        <AntDesign name="hearto" size={15} color="black" />
-                                        <AntDesign name="sharealt" size={15} color="black" />
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="upcircleo" size={15} color="black" /> 
+                                            <Text> 5 </Text>
+                                            <AntDesign name="downcircleo" size={15} color="black" />
                                         </View>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <AntDesign name="exclamationcircleo" size={15} color="black" > report  </AntDesign>
+                                            <AntDesign name="sharealt" size={15} color="black" > share  </AntDesign>
+                                            <AntDesign name="hearto" size={15} color="black" > save  </AntDesign>
+                                        </View>
+
+                                    </View>
                                 </Card.Content>
                             </Card>
                         </View>
                     </TouchableOpacity>
                 </View>
-            </View>
+            </ScrollView>
         );
     }
 }
@@ -139,23 +165,20 @@ const styles = StyleSheet.create({
     },
     touchArea: {
       width: '100%',
-      paddingTop: '5%',
+      paddingTop: '2%',
     },
     container: {
-      flex: 1,
-      alignItems: 'center',
+      flex: 2,
       backgroundColor: 'gainsboro', 
     },
-    cardInfo: {
-      alignItems: 'center',  
-    },
+
     cardRows: {
-      paddingTop: '5%',  
+      paddingTop: '2%',  
     },
     cards: {
-      width: '82%',  
+      width: '100%',  
     },
     pageContainer: {
-      paddingTop: '20%',
+      paddingTop: '0%',
     }
   });

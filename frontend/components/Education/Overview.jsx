@@ -1,18 +1,20 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ToggleButton } from 'react-native-paper';
 import {WebView} from 'react-native-webview';
 
-export default class Lightning extends React.Component {
+// Scroll view not working? 
+
+export default class Overview extends React.Component {
     render () {
         return (
             
-            <View> 
+            <ScrollView> 
                 <View style= {styles.body}>
             
                 <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                <Text>Black Americans and other members of the Black community around the world.</Text>
+                <Text>Black-Americans and other members of the Black community around the world.</Text>
                 <Text></Text>
                 <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
                 <Text>A movement advocating for non-violent civil disobidience in protest against 
@@ -25,7 +27,6 @@ export default class Lightning extends React.Component {
                 <Text></Text>
                 </View>
 
-                {/* need to fix this- not showing up */}
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
                     style={{height:100, width:100}}
@@ -36,7 +37,7 @@ export default class Lightning extends React.Component {
                 <Text></Text>
                 </View>
 
-            </View>
+            </ScrollView>
 
         );
     }
@@ -48,12 +49,15 @@ const styles = StyleSheet.create({
         color: '#8390FA',
         alignItems: 'center',
         fontSize:16,
+        paddingBottom: 4,
+        paddingTop: 4
     },
 
     body: {
          paddingLeft: 48,
          paddingRight: 48,
          fontFamily: "Roboto",
+         paddingTop: 10
 
     },
     

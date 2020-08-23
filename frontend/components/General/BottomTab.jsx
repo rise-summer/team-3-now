@@ -8,7 +8,7 @@ import  Search from "../Search/SearchPage";
 
 import Education from '../Education/Education';
 import ImpactPage from '../Impact/Impact';
-
+import ResourcePage from '../Resource/ResourcePage';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -39,6 +39,7 @@ export default function Bottom() {
               <Stack.Screen options={{title: 'NOW'}} name="Search" component={Search}/>
               <Stack.Screen options={{title: 'NOW'}} name="Education" component={Education}/>
               <Stack.Screen options={{title: 'NOW'}} name="ImpactPage" component={ImpactPage} />
+              <Stack.Screen options={{title: 'NOW'}} name="ResourcePage" component={ResourcePage} />
             </Stack.Navigator>
         )}
         </Tab.Screen>

@@ -1,21 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import { ToggleButton } from 'react-native-paper';
-import Lightning from './Lightning';
-import Infinity from './Infinity';
+import Overview from './Overview';
+import LearnMore from './LearnMore';
 
 export default class LightAndInfin extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = { light: 'checked', infin: 'unchecked', isLight: true }; 
+      this.state = {isLight: true }; 
     }
     
-    onPress = (lightStatus, infinStatus, page) => {
+    onPress = (page) => {
       this.setState({
-        light: lightStatus,
-        infin: infinStatus,
         isLight: page
       });
     }
@@ -26,31 +23,28 @@ export default class LightAndInfin extends React.Component {
           <View style={styles.container}>
             <View style = {styles.buttonContainer}>
               <View style={styles.buttons}>
-                <View style={styles.icon}>
-                  <ToggleButton
-                    icon="light"
-                    value="light"
-                    size={30}
-                    status={this.state.light}
-                    onPress={()=>this.onPress('checked', 'unchecked', true)}
-                  />
+                <View style={styles.pageSelected}>
+                  <TouchableOpacity
+                    onPress={()=>this.onPress(true)}
+                    style = {styles.lightStyle}
+                  >
+                      <Text style={styles.greenText}> Overview </Text>
+                  </TouchableOpacity>
                 </View>
               </View>
               <View style={styles.buttons}>
-                <View style={styles.icon}>
-                <ToggleButton
-                    icon="infinity"
-                    value="infin"
-                    size={30}
-                    status={this.state.infin}
-                    onPress={()=>this.onPress('unchecked', 'checked', false)}
-                  />
+                <View style={styles.page}>
+                    <TouchableOpacity
+                     onPress={()=>this.onPress(false)}
+                    >
+                        <Text style={styles.grayText}> Learn More </Text>
+                    </TouchableOpacity>
                 </View>
               </View>
             </View>
             <View style = {styles.pageContainer}>
               
-              <Lightning></Lightning> 
+              <Overview></Overview> 
             </View>
           </View>
         );
@@ -59,30 +53,27 @@ export default class LightAndInfin extends React.Component {
           <View style={styles.container}>
             <View style = {styles.buttonContainer}>
               <View style={styles.buttons}>
-                <View style={styles.icon}>
-                  <ToggleButton
-                    icon="flash"
-                    value="light"
-                    size={30}
-                    status={this.state.status}
-                    onPress={()=>this.onPress('checked', 'unchecked', true)}
-                  />
+                <View style={styles.page}>
+                    <TouchableOpacity
+                      onPress={()=>this.onPress(true)}
+                    >
+                        <Text style={styles.grayText}> Overview </Text>
+                    </TouchableOpacity>
                 </View>
               </View>
               <View style={styles.buttons}>
-                <View style={styles.icon}>
-                <ToggleButton
-                    icon="infinity"
-                    value="infin"
-                    size={30}
-                    status={this.state.status2}
-                    onPress={()=>this.onPress('unchecked', 'checked', false)}
-                  />
+                <View style={styles.pageSelected}>
+                    <TouchableOpacity
+                      onPress={()=>this.onPress(false)}
+                      style = {styles.infinStyle}
+                    >
+                        <Text style={styles.greenText}> Learn More </Text>
+                    </TouchableOpacity>
                 </View>
               </View>
             </View>
             <View style = {styles.pageContainer}>
-              <Infinity></Infinity>
+              <LearnMore></LearnMore>
             </View>
           </View>
         );
@@ -94,19 +85,47 @@ const styles = StyleSheet.create({
     buttonContainer: {
       flexDirection: 'row',
       paddingTop: '0%',
+      height: '10%',
     },
-    icon: {
-      alignItems: 'center',  
+    page: {
+      alignItems: 'center',
+      borderBottomColor: 'gray',
+      borderBottomWidth: 1,  
+      height: '90%',
+    },
+    pageSelected: {
+      alignItems: 'center',
+      borderBottomColor: "#049F76",
+      borderBottomWidth: 1, 
+      height: '90%', 
     },
     buttons: {
       backgroundColor: 'white',
       width: '50%',
     },
     container: {
-      flex: 1,
+      flex: 2,
       alignItems: 'center',  
     },
     pageContainer: {
-      paddingTop: '20%',
+      paddingTop: '0%',
+    },
+    lightStyle: {
+      width: '100%',
+      alignItems: 'center',
+    },
+    infinStyle: {
+      width: '100%',
+      alignItems: 'center',
+    },
+    grayText: {
+        color: 'grey',
+        fontSize: 18,
+
+    },
+    greenText: {
+        color: "#049F76",
+        fontSize: 18,
+        
     }
   });
