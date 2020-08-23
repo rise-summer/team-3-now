@@ -2,25 +2,32 @@ import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import Header from './Header';
+
 export default function Profile ()  {
     return (
-
-      <View style={styles.container}>
+     
+      <View style={styles.ScreenContainer}>
         <Header></Header>
-        <Text>Profile Screen</Text>
         
-        
-       
-      </View>
+        <View style= {styles.ProfileContainter}>
+            <Text>Profile Screen</Text>
+        </View>
+       </View>
     );
 };
 
 
 const styles = StyleSheet.create({
-  container: {
+   ScreenContainer: {
     flex: 1, 
     alignItems: 'center', 
     justifyContent: 'center'
+  },
+  ProfileContainter:{
+    height:150,
+    width:160,
+    backgroundColor: "#E12F2F"
+     
   },
   header: {
     position:"absolute",
