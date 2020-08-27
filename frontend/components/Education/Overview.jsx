@@ -14,7 +14,7 @@ export default class Overview extends React.Component {
                 <View style= {styles.body}>
             
                 <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                <Text>Black-Americans and other members of the Black community around the world.</Text>
+                <Text>Americans and Black communities around the world.</Text>
                 <Text></Text>
                 <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
                 <Text>A movement advocating for non-violent civil disobidience in protest against 

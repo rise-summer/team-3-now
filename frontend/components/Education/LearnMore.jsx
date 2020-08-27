@@ -9,7 +9,7 @@ import { ToggleButton } from 'react-native-paper';
 export default class LearnMore extends React.Component {
     render () {
         return (
-            <ScrollView>
+            <ScrollView style={{flex:1}}>
                 <Text> Infinity Page Goes Here ʕ•ᴥ•ʔ</Text>
             </ScrollView>
 

@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import {View, CheckBox, StyleSheet, TouchableOpacity, TouchableHighlight,Text, Modal} from "react-native";
 import { IconButton, Colors, Checkbox } from 'react-native-paper';
 
+
 export const Follow = () => {
 
-  const [modalVisible, setModalVisible, isSelected, setSelection] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  var pressed = false;
 
  
   return (
@@ -20,9 +22,9 @@ export const Follow = () => {
         <View>
           <View style={styles.modalView}>
                      
-            <Text style={styles.text}> You are now following</Text>
+            <Text style={styles.text}> You are now following </Text>
             <Text style= {styles.hashtagText}>NAME OF ISSUE</Text>
-            
+{/*             
             <View style={{ flexDirection: 'column'}, {marginRight:60}, {marginLeft:60}} >
 
               <View style={{ flexDirection: 'row'}}>
@@ -36,10 +38,11 @@ export const Follow = () => {
               </View>
 
                 
-            </View>
+            </View> */}
                <View style={styles.SaveButtonContainer}>
                   < TouchableOpacity 
-                      onPress={null}>
+                      onPress={() => {setModalVisible(!modalVisible);  }}>
+
                   <Text style={styles.SaveButtonText}>Save</Text>
                   </TouchableOpacity>
 
@@ -81,19 +84,22 @@ const styles = StyleSheet.create({
   SaveButtonText:{
     fontWeight:"bold",
     color:"white",
-    fontSize: 20,
+    fontSize: 16,
     
   },
   SaveButtonContainer: {
     backgroundColor: "#079476",
     color: "white",
-    elevation: 7,
     borderRadius: 30,
-    paddingVertical: 15,
-    paddingHorizontal: 30,
-    right:30,
-    bottom:30,
-    position:"absolute"
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    right:130,
+    bottom:20,
+    position:"absolute",
+    shadowColor: '#000000',
+    shadowOffset: { height: 1, width: 1 }, 
+    shadowOpacity: 100, 
+    shadowRadius: 5,
     
   },
   FollowButtonContainer: {
@@ -112,23 +118,24 @@ const styles = StyleSheet.create({
   text:{
     alignItems: "center",
     fontSize:16,
-    marginTop:-40,
+    marginTop:-74,
     color:"#079476",
   },
   hashtagText:{
     fontWeight: 'bold',
     alignItems: "center",
-    fontSize:18,
+    fontSize:16,
     color:"#079476",
     paddingBottom: 50,
 
 
   },
   modalView: {
-    margin: 25,
+    margin: 20,
+    marginTop: 100,
     backgroundColor: "white",
     borderRadius: 10,
-    paddingVertical:80,
+    paddingVertical:40,
     paddingTop: 100,
     
     alignItems: "center",
@@ -139,7 +146,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5
+    elevation: 10
   },
   
   CheckBoxText:{
@@ -157,5 +164,18 @@ const styles = StyleSheet.create({
     marginTop: 15,
     paddingLeft: 20,
     position: 'absolute',
-  }
+  },
+FollowButtonPressedContainer: {
+  backgroundColor: "#049F76",
+  borderRadius: 18,
+  paddingVertical: 10,
+  paddingHorizontal: 25
+},
+FollowButtonPressedText: {
+  fontSize: 14,
+  color: "white",
+  alignSelf: "center",
+  
+},
+
 });

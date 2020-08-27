@@ -1,17 +1,21 @@
 import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity, ImageBackground } from 'react-native';
-import {Follow} from './FollowButton';
+import {Follow }from './FollowButton';
 import {Resource} from '../General/ResourceButton';
-import LightInfin from './LightAndInfin';
 import LightAndInfin from './LightAndInfin';
+import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../CauseContext';
+import Header from '../General/Header';
 
 // blm education page
 
-const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-lives-matter-support-impact-0613-exlarge-169.jpg"};
+const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-Toronto-as-police-probe-Korchinski-Paquet-s-death--QWE3JcrPig/img/dddc7a4d81b1410f8a7aabffec98efcf/dddc7a4d81b1410f8a7aabffec98efcf.png"};
  const Education =({navigation}) => {
-    return (
-        <View style={styles.body}>
-          <View style={styles.header}>
+    return (      
+    <View style={styles.ScreenContainer}>
+      <Header></Header>
+
+        <View style={styles.body}> 
+          <View style={styles.hheader}>
             <ImageBackground source={image} style={styles.image} >
               <View style={styles.overlay}>
                 <Text></Text>
@@ -29,7 +33,7 @@ const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-
           <LightAndInfin></LightAndInfin>
 
           <TouchableOpacity
-              onPress={()=> navigation.navigate('ImpactPage')} 
+              onPress={()=> navigation.navigate('Impact')} 
               style={styles.HelpButtonContainer} >
             <Text style={styles.HelpButtonText}>{"How you can help"}</Text>
           </TouchableOpacity> 
@@ -37,6 +41,7 @@ const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-
           <Text></Text>
             
         </View>
+      </View>
     );
 }
 
@@ -44,6 +49,11 @@ export default Education;
 
 
 const styles = StyleSheet.create({
+  ScreenContainer: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
   body: {
     flex:1,
     paddingTop: '0%',
@@ -60,7 +70,7 @@ const styles = StyleSheet.create({
     height: 180,
     
   },
-  header: {
+  hheader: {
     flex:1,
     width: 400,
     paddingTop: '0%',
@@ -98,5 +108,5 @@ const styles = StyleSheet.create({
         color: "#fff",
         alignSelf: "center",
         
-    }   
+    }
 });

@@ -1,20 +1,31 @@
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, StyleSheets, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Profile  from "../Profile/ProfilePage";
 import  Search from "../Search/SearchPage";
+import Header from '../General/Header';
 
 import Education from '../Education/Education';
-import ImpactPage from '../Impact/Impact';
+import Impact from '../Impact/Impact';
 import ResourcePage from '../Resource/ResourcePage';
+import logo from './logo.png';
+import YourCauses from '../Profile/YourCauses';
 
 const Tab = createMaterialBottomTabNavigator();
 
 const Stack = createStackNavigator();
 
 
+function LogoTitle() {
+  return (
+    <Image
+      style={{ width: 60, height: 28, marginLeft: 280}}
+      source={logo}
+    />
+  );
+}
 export default function Bottom() {
   return (
     
@@ -35,25 +46,32 @@ export default function Bottom() {
           }}> 
 
         {()=>(
-          <Stack.Navigator>
-              <Stack.Screen options={{title: 'NOW'}} name="Search" component={Search}/>
-              <Stack.Screen options={{title: 'NOW'}} name="Education" component={Education}/>
-              <Stack.Screen options={{title: 'NOW'}} name="ImpactPage" component={ImpactPage} />
-              <Stack.Screen options={{title: 'NOW'}} name="ResourcePage" component={ResourcePage} />
+          <Stack.Navigator >
+              <Stack.Screen name="Search" component={Search} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="Education" component={Education} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="Impact" component={Impact} options={{ headerTitle: props => <LogoTitle {...props} /> }} />
+              <Stack.Screen name="ResourcePage" component={ResourcePage} options={{ headerTitle: props => <LogoTitle {...props} /> }} />
             </Stack.Navigator>
         )}
         </Tab.Screen>
 
-        <Tab.Screen
-          name="Profile"
-          component={Profile}
+        <Tab.Screen 
+          name="Profile" 
           options={{
-              tabBarIcon: ({ color }) => (
-                <Ionicons name="md-person" color={color} size={26} />
-              ),
-          }}
-        />
-        
+            //tabBarLabel: 'Search',
+            tabBarIcon: ({ color }) => (
+              <Ionicons name="md-person" color={color} size={26} />
+            ),
+          }}> 
+
+        {()=>(
+          <Stack.Navigator >
+              <Stack.Screen name="Profile" component={Profile} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="YourCauses" component={YourCauses} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+            </Stack.Navigator>
+        )}
+        </Tab.Screen>
+
       
     </Tab.Navigator>
       

@@ -6,7 +6,7 @@ import { Card, Title } from 'react-native-paper';
 
 const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-lives-matter-support-impact-0613-exlarge-169.jpg"};
 
-const ImpactPage =({navigation}) => {
+const Impact =({navigation}) => {
   return (
       <View style={styles.body}>
           <View style={styles.header}>
@@ -158,7 +158,7 @@ const ImpactPage =({navigation}) => {
   );
 }
 
-export default ImpactPage;
+export default Impact;
 
 
 const styles = StyleSheet.create({
