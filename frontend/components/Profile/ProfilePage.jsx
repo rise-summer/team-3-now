@@ -4,7 +4,6 @@ import {Ionicons} from '@expo/vector-icons';
 import Header from '../General/Header';
 import pic from './headerpic.jpg';
 import Saved from './Saved';
-import TopCauses from './TopCauses';
 import profilePic from './profilePic.png';
 import { AntDesign } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -28,17 +27,20 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
               </View>
             </ImageBackground> 
           </View>  
-          <View>
-              <View style={{ height: 160, marginTop: 60, width: '100%', flexDirection: 'row', justifyContent: 'flex-start'}}>
+            <View style={{ height: 160, marginTop: 50, width: '100%', justifyContent: 'flex-start', marginLeft: 30}}>
               <Text style = {styles.title}>Your Top Causes</Text>
-              <Text> </Text>
+              <Text></Text>
+              <Text> 1. Yemen Resource Crisis </Text>
+              <Text> 2. Beirut, Lebanon Explosion </Text>
+              <Text> 3. Free Palestine Movement </Text>
+              <View style={{ height: 160, marginTop: 10, width: '100%', flexDirection: 'row', justifyContent: 'flex-start'}}>
+              <Text> See your other causes </Text>
               <TouchableOpacity
                   onPress={()=> navigation.navigate('YourCauses')} >
-                  <AntDesign name="right" size={20} color= "#8390FA" /> 
-                </TouchableOpacity> 
-                </View>
-          </View>
-          <Text></Text>
+                  <AntDesign name="right" size={20} color= "#4C00C9"/> 
+              </TouchableOpacity> 
+            </View>
+            </View>
           <Saved></Saved>  
         </View>
       </View>
@@ -51,6 +53,7 @@ export default Profile;
 const styles = StyleSheet.create({
   ScreenContainer: {
     flex: 1, 
+    alignItems: "center"
 
   },
   body: {
@@ -84,7 +87,7 @@ const styles = StyleSheet.create({
   text: {
     textAlign:'center',
     paddingTop:'0%',
-    paddingBottom:'3%', 
+    paddingBottom:'0%', 
     fontSize: 16,
     color: 'white',
   },
@@ -100,10 +103,9 @@ const styles = StyleSheet.create({
 
   title: {
     fontSize: 18,
-    color: "#8390FA",
+    color: "#4C00C9",
     fontWeight: 'bold',
     justifyContent: 'flex-start',
-    paddingLeft: 30,
 
   },
 });

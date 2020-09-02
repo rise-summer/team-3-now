@@ -110,7 +110,7 @@ export const Resource = () => {
             onPress={() => {
               setModalVisible(true);
             }}>
-            <Text style={styles.ResourceButtonText}>Resource</Text>
+            <Text style={styles.ResourceButtonText}>+ Resource</Text>
           </TouchableHighlight>
             
         </View>
@@ -137,6 +137,7 @@ const styles = StyleSheet.create({
     paddingLeft:20,
     paddingRight:20,
     
+    
  },
  DescriptionInput: {
     height: 100,
@@ -145,7 +146,7 @@ const styles = StyleSheet.create({
     borderRadius:20,
     paddingLeft:20,
     paddingRight:20,
-   
+  color: 'black',
     marginBottom:30,
   },
   DropdownBox:{
@@ -155,8 +156,8 @@ const styles = StyleSheet.create({
         borderBottomRightRadius:24,
         height: 44,
         width: 200, 
-        color:"white",
-        backgroundColor:"#8390FA",
+        borderColor: '#8390FA',
+
   },
   SubmitButtonText:{
     fontWeight:"bold",
@@ -165,7 +166,7 @@ const styles = StyleSheet.create({
     
   },
   SubmitButtonContainer: {
-    backgroundColor: "#049F76",
+    backgroundColor: "#4C00C9",
     color: "white",
     elevation: 7,
     borderRadius: 30,
@@ -184,10 +185,10 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     marginTop:-60,
     marginBottom: 30,
-    color:"#049F76",
+    color:"#4C00C9",
   },
   ResourceButtonContainer: {
-    backgroundColor: "#8390FA",
+    backgroundColor: "#ED254E",
     color: "white",
     borderRadius: 18,
     paddingVertical: 10,

@@ -4,7 +4,6 @@ import {Ionicons} from '@expo/vector-icons';
 import Header from '../General/Header';
 import pic from './headerpic.jpg';
 import Saved from './Saved';
-import TopCauses from './TopCauses';
 import profilePic from './profilePic.png'
 
  const YourCauses =({navigation}) => {
@@ -27,15 +26,35 @@ import profilePic from './profilePic.png'
             </ImageBackground> 
           </View> 
           <ScrollView>
-                <View style={{ height: 200, width: '100%', alignItems: 'center'}}>
+                <View style={{ paddingTop: 180, height: 200, width: '100%', alignItems: 'center'}}>
                     <Text style = {styles.title}>Your Top Causes</Text>
+                    <Text></Text>
+                    <Text> 1. Yemen Resource Crisis </Text>
+                    <Text></Text>
+                    <Text> 2. Beirut, Lebanon Explosion </Text>
+                    <Text></Text>
+                    <Text> 3. Free Palestine Movement </Text>
+                    <Text></Text>
                     <View> 
                     </View>
                 </View>
-                <View style={{ width: '100%', alignItems: 'center'}}>
+                <View style={{ width: '100%', alignItems: 'center', paddingTop: 130}}>
                     <Text style = {styles.title}>Other Causes You Follow</Text>
-                    <ScrollView> 
-                    </ScrollView>
+                    <Text></Text>
+                    <Text> 4. Black Lives Matter </Text>
+                    <Text></Text>
+                    <Text> 5. 2020 US Election </Text>
+                    <Text></Text>
+                    <Text> 6. The Murder of Hacaluu Hundesa - Ethiopia</Text>
+                    <Text></Text>
+                    <Text> 7. Uyghur Muslim Detainment - China </Text>
+                    <Text></Text>
+                    <Text> 8. California Wildfires </Text>
+                    <Text></Text>
+                    <Text> 9. COVID-19 School Reopenings - USA </Text>
+                    <Text></Text>
+                    <Text> 10. Junk Terror Bill - Philippines </Text>
+                    <Text></Text>
                 </View>
         </ScrollView> 
         </View>
@@ -103,23 +122,13 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    fontSize: 18,
-    color: "#8390FA",
+    fontSize: 20,
+    color: "#4C00C9",
     fontWeight: 'bold',
     justifyContent: 'center',
 
   },
-    HelpButtonContainer: {
-    
-        backgroundColor: "#ED254E",
-        borderRadius: 35,
-        paddingVertical: 14,
-        paddingHorizontal: 40,
-        shadowColor: '#000000',
-        shadowOffset: { height: 1, width: 1 }, 
-        shadowOpacity: 100, 
-        shadowRadius: 5,
-    },
+
     HelpButtonText: {
         fontSize: 14,
         color: "#fff",

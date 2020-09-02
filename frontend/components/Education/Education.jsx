@@ -3,8 +3,9 @@ import { StyleSheet, Text, View,TouchableOpacity, ImageBackground } from 'react-
 import {Follow }from './FollowButton';
 import {Resource} from '../General/ResourceButton';
 import LightAndInfin from './LightAndInfin';
-import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../CauseContext';
+import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../Causes/CauseContext';
 import Header from '../General/Header';
+
 
 // blm education page
 
@@ -23,7 +24,6 @@ const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-T
                 <Text style= {styles.text}>15k followers</Text>
                 <View style={{justifyContent: 'center'}}>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
-                    <Resource></Resource>
                     <Follow></Follow>
                 </View>
                 </View>

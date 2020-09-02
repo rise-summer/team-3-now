@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     
   },
   SaveButtonContainer: {
-    backgroundColor: "#079476",
+    backgroundColor: "#4C00C9",
     color: "white",
     borderRadius: 30,
     paddingVertical: 10,
@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
   },
   FollowButtonText: {
     fontSize: 14,
-    color: "#049F76",
+    color: "#4C00C9",
     alignSelf: "center",
     
   },
@@ -119,13 +119,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     fontSize:16,
     marginTop:-74,
-    color:"#079476",
+    color:"#4C00C9",
   },
   hashtagText:{
     fontWeight: 'bold',
     alignItems: "center",
     fontSize:16,
-    color:"#079476",
+    color:"#4C00C9",
     paddingBottom: 50,
 
 
@@ -166,7 +166,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
 FollowButtonPressedContainer: {
-  backgroundColor: "#049F76",
+  backgroundColor: "#4C00C9",
   borderRadius: 18,
   paddingVertical: 10,
   paddingHorizontal: 25

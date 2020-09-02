@@ -91,13 +91,13 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       borderBottomColor: 'gray',
       borderBottomWidth: 1,  
-      height: '90%',
+      height: '100%',
     },
     pageSelected: {
       alignItems: 'center',
-      borderBottomColor: "#049F76",
+      borderBottomColor: "#4C00C9",
       borderBottomWidth: 1, 
-      height: '90%', 
+      height: '100%', 
     },
     buttons: {
       backgroundColor: 'white',
@@ -124,7 +124,7 @@ const styles = StyleSheet.create({
 
     },
     greenText: {
-        color: "#049F76",
+        color: "#4C00C9",
         fontSize: 18,
         
     }

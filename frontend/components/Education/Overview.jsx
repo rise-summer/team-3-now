@@ -9,35 +9,37 @@ import {WebView} from 'react-native-webview';
 export default class Overview extends React.Component {
     render () {
         return (
-            
-            <ScrollView> 
-                <View style= {styles.body}>
-            
-                <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                <Text>Americans and Black communities around the world.</Text>
-                <Text></Text>
-                <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
-                <Text>A movement advocating for non-violent civil disobidience in protest against 
-                    incidents of police brutality and all racially motivated violence against Black-Americans. </Text>
-                <Text></Text>
-                <Text style= {styles.title}>WHEN?</Text>
-                <Text>Black Americans and other members of the Black community around the world.</Text>
-                <Text></Text>
-                <Text style= {styles.title}>WHERE?</Text>
-                <Text></Text>
-                </View>
+            <View style= {styles.container}>
+                 <ScrollView> 
+                    <View style= {styles.body}>
+                
+                    <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
+                    <Text>Americans and Black communities around the world. . </Text>
+                    <Text></Text>
+                    <Text style= {styles.title}>WHY IS IT IMPORTANT?</Text>
+                    <Text>Black Americans are being killed by police and the United States carceral system at extremely disproportionate rates.
+                    </Text>
+                    <Text></Text>
+                    <Text style= {styles.title}>WHERE IS IT HAPPENING?</Text>
+                    <Text>The United States </Text>
+                    {/* <Text></Text> */}
+                    </View>
 
-                <WebView
-                    source={{html: require('./Globe/globe.js')()}}
-                    style={{height:100, width:100}}
-                />
-                <View style= {styles.body}>
-                <Text style= {styles.title}>WHY THIS MATTERS...</Text>
-                <Text>Black Americans are being discriminated against, targetted and killed at disproportionate rates.</Text>
-                <Text></Text>
-                </View>
+                    <WebView
+                        source={{html: require('./Globe/globe.js')()}}
+                        style={{height:100, width:100}}
+                    />
+                    <View style= {styles.body}>
+                    <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
+                    <Text>The Black Lives Matter movement was founded in 2013 after the murder of Trayvon Martin. On May 25th, 2020, the Minneapolis police murdered George Floyd, sparking protests across the world in the name of the #BlackLivesMatter movement, mobilizing against police brutality and anti-Black racism. Most recently, Jacob Blake of Kenosha, Wisconsin has been paralyzed by the police after being shot 7 times at close range. Protests are continually being organized as protesters demand justice for lives of Black Americans lost to anti-Black racism. </Text>
+                    <Text></Text>
+                   
+                    </View>
 
-            </ScrollView>
+                </ScrollView>
+
+
+            </View>
 
         );
     }
@@ -45,6 +47,9 @@ export default class Overview extends React.Component {
 
 
 const styles = StyleSheet.create({
+    container: {
+        flex: 1
+    },
     title: {
         color: '#8390FA',
         alignItems: 'center',
