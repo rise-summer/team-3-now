@@ -4,7 +4,7 @@ import {Ionicons} from '@expo/vector-icons';
 import logo from './logo.png'
 
 
-const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-lives-matter-support-impact-0613-exlarge-169.jpg"};
+
 export default function Header ()  {
     return (
 

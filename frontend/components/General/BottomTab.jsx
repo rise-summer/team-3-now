@@ -31,7 +31,7 @@ export default function Bottom() {
     
     <Tab.Navigator
       initialRouteName="Search"
-      activeColor= "#3ECCBB"
+      activeColor= "#4C00C9"
       inactiveColor="gray"
       barStyle= { {backgroundColor: "white"}}
       style={{ backgroundColor: 'white' }}>

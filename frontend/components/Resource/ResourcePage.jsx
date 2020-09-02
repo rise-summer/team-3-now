@@ -4,7 +4,7 @@ import PetitionCards from './PetitionCards'
 import {Resource} from '../General/ResourceButton';
 
 
-const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-lives-matter-support-impact-0613-exlarge-169.jpg"};
+const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-Toronto-as-police-probe-Korchinski-Paquet-s-death--QWE3JcrPig/img/dddc7a4d81b1410f8a7aabffec98efcf/dddc7a4d81b1410f8a7aabffec98efcf.png"};
 const ResourcePage =({navigation}) => {
   return (
     <View style={styles.body}>
@@ -13,7 +13,7 @@ const ResourcePage =({navigation}) => {
         <View style={styles.overlay}>
           <Text></Text>
           <Text style= {styles.headerHashtag}> Black Lives Matter </Text>
-          <Text style= {styles.text}>How You Can Help</Text>
+          <Text style= {styles.text}>Resources</Text>
           <View style={{justifyContent: 'center', flexDirection: 'row'}}>
               <Resource></Resource>
           </View>

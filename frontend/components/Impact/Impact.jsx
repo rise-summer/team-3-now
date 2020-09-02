@@ -4,7 +4,8 @@ import {Resource} from '../General/ResourceButton';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Card, Title } from 'react-native-paper';
 
-const image = { uri: "https://cdn.cnn.com/cnnnext/dam/assets/200622104651-black-lives-matter-support-impact-0613-exlarge-169.jpg"};
+const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-Toronto-as-police-probe-Korchinski-Paquet-s-death--QWE3JcrPig/img/dddc7a4d81b1410f8a7aabffec98efcf/dddc7a4d81b1410f8a7aabffec98efcf.png"};
+
 
 const Impact =({navigation}) => {
   return (
@@ -31,7 +32,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="pencil" size={36} color="#049F76"></Icon>
+                                    <Icon name="pencil" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -50,7 +51,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="email" size={36} color='#8390FA'></Icon>
+                                    <Icon name="email" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                 <Text></Text>
@@ -71,7 +72,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="star" size={36} color='#8390FA'></Icon>
+                                    <Icon name="star" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                 <Text></Text>
@@ -90,7 +91,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="calendar" size={36} color="#049F76"></Icon>
+                                    <Icon name="calendar" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                 <Text></Text>
@@ -111,7 +112,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="heart" size={36} color="#049F76"></Icon>
+                                    <Icon name="heart" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                 <Text></Text>
@@ -130,7 +131,7 @@ const Impact =({navigation}) => {
                                     <Text></Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Icon name="newspaper" size={36} color='#8390FA'></Icon>
+                                    <Icon name="newspaper" size={36} color="#4C00C9"></Icon>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                 <Text></Text>
@@ -228,21 +229,21 @@ const styles = StyleSheet.create({
     cardsGreen: {
       width: '90%', 
       borderWidth: 2,
-      borderColor: "#049F76",
+      borderColor: "#4C00C9",
     },
     cardsBlue: {
       width: '90%', 
       borderWidth: 2,
-      borderColor: '#8390FA',
+      borderColor: "#4C00C9",
     },
     pageContainer: {
       paddingTop: '20%',
     },
     blueText: {
-        color: '#8390FA',
+        color: "#4C00C9",
     },
     greenText: {
-        color: "#049F76",
+        color: "#4C00C9",
     }
 
   });

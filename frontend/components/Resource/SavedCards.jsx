@@ -30,7 +30,7 @@ export default class SavedCards extends React.Component{
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Broenna Taylor was an award-winning EMT and model citizen. She loved her family and community, working at two hospitals as an... </Text>
+                                    <Text>Broenna Taylor was a model citizen who loved her community and family. She deserves justice... </Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -61,13 +61,13 @@ export default class SavedCards extends React.Component{
                             <Card style={styles.cards}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <Text>    </Text>
-                                <Icon name="pencil" size={24} color="#8390FA"></Icon>
+                                <Icon name="star" size={24} color="#8390FA"></Icon>
                                 <Text>  </Text>
-                                <Text style= {styles.title}>Defund The Police</Text>
+                                <Text style= {styles.title}>Impact Lebanon</Text>
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Join this movement, under the Black Lives Matter movement, which aims to defund law enforcement and redirect funds to invest in Black communities...</Text>
+                                    <Text>Donate to support first responders and people affected by the explosion in Beirut...</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
       paddingTop: '2%',  
     },
     cards: {
-      width: '100%',
+      width: '90%',
       marginTop: '0%',
       paddingTop: '0%'
     },
