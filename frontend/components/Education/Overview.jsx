@@ -4,6 +4,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ToggleButton } from 'react-native-paper';
 import {WebView} from 'react-native-webview';
 
+// Scroll view not working? 
+
 export default class Overview extends React.Component {
     render () {
         return (
@@ -12,7 +14,7 @@ export default class Overview extends React.Component {
                 <View style= {styles.body}>
             
                 <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                <Text>Black Americans and other members of the Black community around the world.</Text>
+                <Text>Americans and Black communities around the world.</Text>
                 <Text></Text>
                 <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
                 <Text>A movement advocating for non-violent civil disobidience in protest against 
@@ -25,10 +27,9 @@ export default class Overview extends React.Component {
                 <Text></Text>
                 </View>
 
-                {/* need to fix this- not showing up */}
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
-                    style={{height:100, width:100}}
+                    style={{height:200, width:200}}
                 />
                 <View style= {styles.body}>
                 <Text style= {styles.title}>WHY THIS MATTERS...</Text>
@@ -48,12 +49,15 @@ const styles = StyleSheet.create({
         color: '#8390FA',
         alignItems: 'center',
         fontSize:16,
+        paddingBottom: 4,
+        paddingTop: 4
     },
 
     body: {
          paddingLeft: 48,
          paddingRight: 48,
          fontFamily: "Roboto",
+         paddingTop: 10
 
     },
     

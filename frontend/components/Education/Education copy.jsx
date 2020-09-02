@@ -1,47 +1,54 @@
 import React, {useContext} from 'react';
-import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,ImageBackground } from 'react-native';
 import {WebView} from 'react-native-webview';
-import {Follow} from '../General/FollowButton';
+import {Follow} from './FollowButton';
 import {Resource} from '../General/ResourceButton';
 import LightInfin from './LightAndInfin';
-import {CauseProvider, CauseContext,CauseDispatchContext} from './CauseContext';
-
+import {CauseProvider, CauseContext,CauseDispatchContext} from '../CauseContext';
+import LightAndInfin from './LightAndInfin';
 
 // education template
 
+
  const Education =({navigation}) => {
          
-          const CauseDetails = useContext(CauseContext);
-          const setCauseDetails = useContext(CauseDispatchContext);
+         const CauseDetails = useContext(CauseContext);
+        // const setCauseDetails = useContext(CauseDispatchContext);
+         const image = { uri: CauseDetails.cause1.imgURL};
+
          return (
-            
-            <View style={styles.hello}>
-                
-                <Text style= {{fontSize:100}}> </Text>
-                <Text style= {styles.hashtag}> {CauseDetails.cause2.hashtagName} </Text>
-                <Text>num followers</Text>
-                
-                <View style={{flexDirection: 'row'}}>
-                    <Resource></Resource>
-                    <Follow></Follow>
+           
+            <View style={styles.ScreenContainer}>
+                {/* <Header></Header> */}
+
+                    <View style={styles.body}> 
+                    <View style={styles.hheader}>
+                        <ImageBackground source={image} style={styles.image} >
+                        <View style={styles.overlay}>
+                            <Text></Text>
+                            <Text style= {styles.headerHashtag}> {CauseDetails.cause1.hashtagName} </Text>
+                            <Text style= {styles.text}>15k followers</Text>
+                            <View style={{justifyContent: 'center'}}>
+                            <View style={{flexDirection: 'row', justifyContent: 'center'}}>
+                                <Resource></Resource>
+                                <Follow></Follow>
+                            </View>
+                            </View>
+                        </View>
+                        </ImageBackground> 
+                    </View>  
+                    <LightAndInfin></LightAndInfin>
+
+                    <TouchableOpacity
+                        onPress={()=> navigation.navigate('Impact')} 
+                        style={styles.HelpButtonContainer} >
+                        <Text style={styles.HelpButtonText}>{"How you can help"}</Text>
+                    </TouchableOpacity> 
+
+                    <Text></Text>
+                        
+                    </View>
                 </View>
-
-                <Text style={{paddingBottom:20}}></Text>
-                
-                {/* <WebView
-                    source={{html: require('./Globe/globe.js')()}}
-                    style={{height:0, width:300}}
-                /> */}
-
-                <LightInfin></LightInfin>
-
-                <TouchableOpacity
-                   onPress={()=> navigation.navigate('ImpactPage')} 
-                   style={styles.HelpButtonContainer} >
-                  <Text style={styles.HelpButtonText}>{"How You Can Help"}</Text>
-                </TouchableOpacity> 
-                
-            </View>
             
         );
 }
@@ -49,33 +56,64 @@ import {CauseProvider, CauseContext,CauseDispatchContext} from './CauseContext';
 export default Education;
 
 const styles = StyleSheet.create({
-    hello: {
-      flex: 1,
-      flexDirection: 'column',
-      backgroundColor: '#fff',
-      alignItems: 'center',
-      paddingTop: '0%',
-    },
-    hashtag: {
-      fontSize: 22,
-      fontWeight: 'bold',
-    },
-    header:{
-        paddingTop: '10%',
-        fontSize:30,
-        fontWeight:'bold',
-        paddingBottom:'5%',
-    },
-    HelpButtonContainer: {
-       
-        backgroundColor: "#ED254E",
-        borderRadius: 35,
-        paddingVertical: 14,
-        paddingHorizontal: 40
-    },
-    HelpButtonText: {
-        fontSize: 14,
-        color: "#fff",
-        alignSelf: "center",
-    }   
+    ScreenContainer: {
+        flex: 1, 
+        alignItems: 'center', 
+        justifyContent: 'center'
+      },
+      body: {
+        flex:1,
+        paddingTop: '0%',
+        backgroundColor: '#fff',
+        alignItems: 'center',
+      },
+      overlay: {
+        backgroundColor:'rgba(2,0,0,0.6)',
+        height: 180,
+      },
+    
+      image: {
+        width: '100%',
+        height: 180,
+        
+      },
+      hheader: {
+        flex:1,
+        width: 400,
+        paddingTop: '0%',
+        paddingLeft: '0%',
+        alignItems: 'center',
+      },
+      text: {
+        textAlign:'center',
+        paddingTop:'1%',
+        paddingBottom:'3%', 
+        fontSize: 18,
+        color: 'white',
+      },
+    
+      headerHashtag: {
+        textAlign:'center',  
+        justifyContent: 'center',
+        fontSize: 28,
+        fontWeight: 'bold',
+        color: 'white',
+      },
+        HelpButtonContainer: {
+        
+            backgroundColor: "#ED254E",
+            borderRadius: 35,
+            paddingVertical: 14,
+            paddingHorizontal: 40,
+            shadowColor: '#000000',
+            shadowOffset: { height: 1, width: 1 }, 
+            shadowOpacity: 100, 
+            shadowRadius: 5,
+        },
+        HelpButtonText: {
+            fontSize: 14,
+            color: "#fff",
+            alignSelf: "center",
+            
+        }  
 });

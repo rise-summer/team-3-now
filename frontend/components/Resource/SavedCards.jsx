@@ -10,7 +10,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 // Add onPress event for save
 // TO DO: Add onPress events to navigate to respective pages for each card 
 
-export default class PetitionCards extends React.Component{
+export default class SavedCards extends React.Component{
     
     onPress = () => {
     }
@@ -24,8 +24,8 @@ export default class PetitionCards extends React.Component{
                             <Card style={styles.cards}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <Text>    </Text>
-                                <Icon name="pencil" size={24} color="#8390FA"></Icon>
-                                <Text>  </Text>
+                                <Icon name="email" size={24} color="#8390FA"></Icon>
+                                <Text>   </Text>
                                 <Text style= {styles.title}>Stand with Breonna Taylor</Text>
                                             
                             </View>
@@ -45,7 +45,7 @@ export default class PetitionCards extends React.Component{
                                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                             <AntDesign name="exclamationcircleo" size={14} color="black" > report  </AntDesign>
                                             <AntDesign name="sharealt" size={14} color="black" > share  </AntDesign>
-                                            <AntDesign name="hearto" size={14} color="black" > save  </AntDesign>  
+                                            <AntDesign name="heart" size={14} color="black" > save  </AntDesign>  
 
                                         </View>
 
@@ -82,7 +82,7 @@ export default class PetitionCards extends React.Component{
                                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                             <AntDesign name="exclamationcircleo" size={14} color="black" > report  </AntDesign>
                                             <AntDesign name="sharealt" size={14} color="black" > share  </AntDesign>
-                                            <AntDesign name="hearto" size={14} color="black" > save  </AntDesign>  
+                                            <AntDesign name="heart" size={14} color="black" > save  </AntDesign>  
 
                                         </View>
 
@@ -98,7 +98,7 @@ export default class PetitionCards extends React.Component{
                             <Card style={styles.cards}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <Text>    </Text>
-                                <Icon name="pencil" size={24} color="#8390FA"></Icon>
+                                <Icon name="heart" size={24} color="#8390FA"></Icon>
                                 <Text>  </Text>
                                 <Text style= {styles.title}>Justice for Ahmaud Arbery</Text>
                                             
@@ -119,7 +119,7 @@ export default class PetitionCards extends React.Component{
                                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                             <AntDesign name="exclamationcircleo" size={14} color="black" > report  </AntDesign>
                                             <AntDesign name="sharealt" size={14} color="black" > share  </AntDesign>
-                                            <AntDesign name="hearto" size={14} color="black" > save  </AntDesign>  
+                                            <AntDesign name="heart" size={14} color="black" > save  </AntDesign>  
 
                                         </View>
 
@@ -135,7 +135,7 @@ export default class PetitionCards extends React.Component{
                             <Card style={styles.cards}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <Text>    </Text>
-                                <Icon name="pencil" size={24} color="#8390FA"></Icon>
+                                <Icon name="star" size={24} color="#8390FA"></Icon>
                                 <Text>  </Text>
                                 <Text style= {styles.title}>Hands Up Act</Text>
                                             
@@ -156,7 +156,7 @@ export default class PetitionCards extends React.Component{
                                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                             <AntDesign name="exclamationcircleo" size={14} color="black" > report  </AntDesign>
                                             <AntDesign name="sharealt" size={14} color="black" > share  </AntDesign>
-                                            <AntDesign name="hearto" size={14} color="black" > save  </AntDesign>  
+                                            <AntDesign name="heart" size={14} color="black" > save  </AntDesign>  
 
                                         </View>
 

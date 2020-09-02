@@ -1,24 +1,24 @@
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Overview from './Overview';
-import LearnMore from './LearnMore';
+import SavedArticles from './SavedArticles';
+import SavedResources from './SavedResources';
 
-export default class LightAndInfin extends React.Component {
+export default class Saved extends React.Component {
 
     constructor(props) {
       super(props);
-      this.state = {isLight: true }; 
+      this.state = {isA: true }; 
     }
     
     onPress = (page) => {
       this.setState({
-        isLight: page
+        isA: page
       });
     }
 
     render () {
-      if (this.state.isLight) {
+      if (this.state.isA) {
         return (
           <View style={styles.container}>
             <View style = {styles.buttonContainer}>
@@ -28,7 +28,7 @@ export default class LightAndInfin extends React.Component {
                     onPress={()=>this.onPress(true)}
                     style = {styles.lightStyle}
                   >
-                      <Text style={styles.greenText}> Overview </Text>
+                      <Text style={styles.greenText}> Saved Articles </Text>
                   </TouchableOpacity>
                 </View>
               </View>
@@ -37,14 +37,14 @@ export default class LightAndInfin extends React.Component {
                     <TouchableOpacity
                      onPress={()=>this.onPress(false)}
                     >
-                        <Text style={styles.grayText}> Learn More </Text>
+                        <Text style={styles.grayText}> Saved Resources </Text>
                     </TouchableOpacity>
                 </View>
               </View>
             </View>
             <View style = {styles.pageContainer}>
               
-              <Overview></Overview> 
+              <SavedArticles></SavedArticles> 
             </View>
           </View>
         );
@@ -57,7 +57,7 @@ export default class LightAndInfin extends React.Component {
                     <TouchableOpacity
                       onPress={()=>this.onPress(true)}
                     >
-                        <Text style={styles.grayText}> Overview </Text>
+                        <Text style={styles.grayText}> Saved Articles </Text>
                     </TouchableOpacity>
                 </View>
               </View>
@@ -67,13 +67,13 @@ export default class LightAndInfin extends React.Component {
                       onPress={()=>this.onPress(false)}
                       style = {styles.infinStyle}
                     >
-                        <Text style={styles.greenText}> Learn More </Text>
+                        <Text style={styles.greenText}> Saved Resources </Text>
                     </TouchableOpacity>
                 </View>
               </View>
             </View>
             <View style = {styles.pageContainer}>
-              <LearnMore></LearnMore>
+              <SavedResources></SavedResources>
             </View>
           </View>
         );
@@ -120,12 +120,12 @@ const styles = StyleSheet.create({
     },
     grayText: {
         color: 'grey',
-        fontSize: 18,
+        fontSize: 16,
 
     },
     greenText: {
         color: "#049F76",
-        fontSize: 18,
+        fontSize: 16,
         
     }
   });

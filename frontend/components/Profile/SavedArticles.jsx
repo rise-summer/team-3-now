@@ -3,14 +3,11 @@ import { StyleSheet, Text, TouchableOpacity, View, ScrollView } from 'react-nati
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { ToggleButton } from 'react-native-paper';
 
-
-// Scroll view not working? 
-
-export default class LearnMore extends React.Component {
+export default class SavedArticles extends React.Component {
     render () {
         return (
             <ScrollView style={{flex:1}}>
-                <Text> Infinity Page Goes Here ʕ•ᴥ•ʔ</Text>
+                <Text> Saved Articles Go Here </Text>
             </ScrollView>
 
         );

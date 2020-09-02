@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, CheckBox, StyleSheet, TouchableOpacity, TextInput ,TouchableHighlight,Text, Modal, Picker } from "react-native";
 import { KeyboardAwareScrollView  } from "react-native-keyboard-aware-scroll-view";
 import { IconButton, Colors } from 'react-native-paper';
+import DropDownPicker from 'react-native-dropdown-picker';
 
 
 export const Resource = () => {
@@ -11,7 +12,8 @@ export const Resource = () => {
   const [title, setTitle] = useState(' ');
   const [link, setLink] = useState(' ');
   const [description, setDescription] = useState(' ');
-  
+
+
    return (
 
           <View style={styles.screenContainer}>
@@ -32,18 +34,23 @@ export const Resource = () => {
                         
 
                         <View >
-                            <Picker
-                                selectedValue={selectedValue}
-                                style={{height: 50,width: 210, color:"white",backgroundColor:"#8390FA", borderBottomRightRadius:20, borderBottomLeftRadius:20,borderTopLeftRadius:20,borderTopRightRadius:20}}
-                                onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-                                
-                            <Picker.Item label="Petition" value="Petition"  color={"#8390FA"}/>
-                            <Picker.Item label="Email Template" value="Email Template" color={"#8390FA"}  />
-                            <Picker.Item label="Donation Fund" value="Donation Fund" color={"#8390FA"}  />
-                            <Picker.Item label="Event" value="Event" color={"#8390FA"}/>
-                            <Picker.Item label="Volunteer Opportunity" value="Volunteer Opportunity" color={"#8390FA"}/>
-                            <Picker.Item label="Infographic" value="Infographic"color={"#8390FA"}  />
-                            </Picker> 
+                          <DropDownPicker 
+                              style={styles.DropdownBox}
+                              items={[
+                                  {label: "Petition", value: "Petition" },
+                                  {label: "Email Template" , value: "Email Template" },
+                                  {label: "Donation Fund", value: "Donation Fund"},
+                                  {label: "Event", value: "Event"},
+                                  {label: "Volunteer Opportunity" , value: "Volunteer Opportunity" },
+                                  {label: "Infographic", value: "Infographic"},
+                              ]}
+                              containerStyle={{height: 40}}
+                              itemStyle={{
+                                  flex: 1,
+                                  justifyContent: 'flex-start'
+                              }}
+                       
+                          />
                         </View>
 
                     
@@ -78,7 +85,7 @@ export const Resource = () => {
                     
                     <View style={styles.SubmitButtonContainer}>
                             < TouchableOpacity 
-                                onPress={null}>
+                                onPress={() => {setModalVisible(!modalVisible); }}>
                             <Text style={styles.SubmitButtonText}>Submit</Text>
                             </TouchableOpacity>
 
@@ -143,28 +150,28 @@ const styles = StyleSheet.create({
     marginBottom:30,
   },
   DropdownBox:{
-        borderTopLeftRadius: 50,
-        borderTopRightRadius:40,
-        borderBottomLeftRadius:10,
-        borderBottomRightRadius:10,
-        height: 50,
-        width: 210, 
-        color:"white",
+        borderTopLeftRadius: 24,
+        borderTopRightRadius:24,
+        borderBottomLeftRadius:24,
+        borderBottomRightRadius:24,
+        height: 44,
+        width: 200, 
+        color:"#FFFFFF",
         backgroundColor:"#8390FA",
   },
   SubmitButtonText:{
     fontWeight:"bold",
     color:"white",
-    fontSize: 20,
+    fontSize: 16,
     
   },
   SubmitButtonContainer: {
-    backgroundColor: "#3ECCBB",
+    backgroundColor: "#049F76",
     color: "white",
     elevation: 7,
     borderRadius: 30,
-    paddingVertical: 15,
-    paddingHorizontal: 30,
+    paddingVertical: 12,
+    paddingHorizontal: 20,
     right:30,
     bottom:30,
     position:"absolute",
@@ -174,11 +181,11 @@ const styles = StyleSheet.create({
   submitText:{
     justifyContent:"center",//Centered vertically
     //alignItems: 'center',// Centered horizontally
-    fontSize:30,
+    fontSize:18,
     fontWeight:'bold',
-    marginTop:-80,
+    marginTop:-60,
     marginBottom: 30,
-    color:"#3ECCBB",
+    color:"#049F76",
   },
   ResourceButtonContainer: {
     backgroundColor: "#8390FA",
@@ -193,10 +200,11 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
   modalView: {
-    margin: 25,
+    margin: 20,
+    marginTop: 100,
     backgroundColor: "white",
     borderRadius: 10,
-    paddingVertical:130,
+    paddingVertical:96,
     paddingHorizontal: 30,
   
     alignItems: "center",
@@ -207,13 +215,13 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.25,
     shadowRadius: 3.84,
-    elevation: 5
+    elevation: 10
   },
   CheckBoxText:{
     color: "black",
     paddingRight:15,
     marginLeft:5,
-    fontSize:18
+    fontSize:14
   
   },
   icon:{

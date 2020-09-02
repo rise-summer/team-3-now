@@ -1,40 +1,52 @@
-import React from 'react';
-import { StyleSheet, Text, View,TouchableOpacity } from 'react-native';
-import {Follow} from './FollowButton';
+import React, {useContext}  from 'react';
+import { StyleSheet, Text, View,TouchableOpacity, ImageBackground } from 'react-native';
+import {Follow }from './FollowButton';
 import {Resource} from '../General/ResourceButton';
-import LightInfin from './LightAndInfin';
 import LightAndInfin from './LightAndInfin';
+import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../CauseContext';
+import Header from '../General/Header';
 
 // blm education page
 
+const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-Toronto-as-police-probe-Korchinski-Paquet-s-death--QWE3JcrPig/img/dddc7a4d81b1410f8a7aabffec98efcf/dddc7a4d81b1410f8a7aabffec98efcf.png"};
  const Education =({navigation}) => {
-    return (
-        <View style={styles.header}>
-            <View>
-                <Text style= {styles.headerHashtag}> #BlackLivesMatter </Text>
+    
+  const CauseDetails = useContext(CauseContext);
+  const setCauseDetails = useContext(CauseDispatchContext);
+  
+  return (    
+
+    <View style={styles.ScreenContainer}>
+      {/* <Header></Header> */}
+
+        <View style={styles.body}> 
+          <View style={styles.hheader}>
+            <ImageBackground source={image} style={styles.image} >
+              <View style={styles.overlay}>
+                <Text></Text>
+                <Text style= {styles.headerHashtag}> Black Lives Matter </Text>
                 <Text style= {styles.text}>15k followers</Text>
                 <View style={{justifyContent: 'center'}}>
-                <View style={{flexDirection: 'row'}}>
+                <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                     <Resource></Resource>
                     <Follow></Follow>
                 </View>
                 </View>
-            </View> 
-            
-            <Text style={{paddingBottom:20}}></Text>
+              </View>
+            </ImageBackground> 
+          </View>  
+          <LightAndInfin></LightAndInfin>
 
+          <TouchableOpacity
+              onPress={()=> navigation.navigate('Impact')} 
+              style={styles.HelpButtonContainer} >
+            <Text style={styles.HelpButtonText}>{"How you can help"}</Text>
+          </TouchableOpacity> 
 
-            <LightAndInfin></LightAndInfin>
-
-            <TouchableOpacity
-               onPress={()=> navigation.navigate('ImpactPage')} 
-               style={styles.HelpButtonContainer} >
-              <Text style={styles.HelpButtonText}>{"How you can help"}</Text>
-            </TouchableOpacity> 
-
-            <Text></Text>
+          <Text></Text>
             
         </View>
+      </View>
     );
 }
 
@@ -42,36 +54,49 @@ export default Education;
 
 
 const styles = StyleSheet.create({
-    header: {
-        flex:1,
-        paddingTop: '15%',
-        //flexDirection: 'column',
-        backgroundColor: '#fff',
-        alignItems: 'center',
-       
-      },
-      headerText: {
-        textAlign:'center',
-        justifyContent: 'center', 
-        fontWeight: 'bold',
-        fontSize: 30,
-        color: '#333',
-        paddingBottom: '5%',
-        
-      },
-      text: {
-        textAlign:'center',
-        paddingBottom:'3%',   
-      },
-      filler: {
-        fontSize: 450,    
-      },
-      headerHashtag: {
-        textAlign:'center',  
-        justifyContent: 'center',
-          fontSize: 22,
-          fontWeight: 'bold',
-      },
+  ScreenContainer: {
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
+  },
+  body: {
+    flex:1,
+    paddingTop: '0%',
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  overlay: {
+    backgroundColor:'rgba(2,0,0,0.6)',
+    height: 180,
+  },
+
+  image: {
+    width: '100%',
+    height: 180,
+    
+  },
+  hheader: {
+    flex:1,
+    width: 400,
+    paddingTop: '0%',
+    paddingLeft: '0%',
+    alignItems: 'center',
+  },
+  text: {
+    textAlign:'center',
+    paddingTop:'1%',
+    paddingBottom:'3%', 
+    fontSize: 18,
+    color: 'white',
+  },
+
+  headerHashtag: {
+    textAlign:'center',  
+    justifyContent: 'center',
+    fontSize: 28,
+    fontWeight: 'bold',
+    color: 'white',
+  },
     HelpButtonContainer: {
     
         backgroundColor: "#ED254E",
@@ -88,5 +113,5 @@ const styles = StyleSheet.create({
         color: "#fff",
         alignSelf: "center",
         
-    }   
+    }
 });

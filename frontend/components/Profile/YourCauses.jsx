@@ -1,15 +1,13 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, ScrollView, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Button, StyleSheet, ScrollView, ImageBackground, Image } from 'react-native';
 import {Ionicons} from '@expo/vector-icons';
 import Header from '../General/Header';
 import pic from './headerpic.jpg';
 import Saved from './Saved';
 import TopCauses from './TopCauses';
-import profilePic from './profilePic.png';
-import { AntDesign } from '@expo/vector-icons';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import profilePic from './profilePic.png'
 
- const Profile =({navigation}) => {
+ const YourCauses =({navigation}) => {
     return (      
     <View style={styles.ScreenContainer}>
       {/* <Header></Header> */}
@@ -27,25 +25,26 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
                 </View>
               </View>
             </ImageBackground> 
-          </View>  
-          <View>
-              <View style={{ height: 160, marginTop: 60, width: '100%', flexDirection: 'row', justifyContent: 'flex-start'}}>
-              <Text style = {styles.title}>Your Top Causes</Text>
-              <Text> </Text>
-              <TouchableOpacity
-                  onPress={()=> navigation.navigate('YourCauses')} >
-                  <AntDesign name="right" size={20} color= "#8390FA" /> 
-                </TouchableOpacity> 
+          </View> 
+          <ScrollView>
+                <View style={{ height: 200, width: '100%', alignItems: 'center'}}>
+                    <Text style = {styles.title}>Your Top Causes</Text>
+                    <View> 
+                    </View>
                 </View>
-          </View>
-          <Text></Text>
-          <Saved></Saved>  
+                <View style={{ width: '100%', alignItems: 'center'}}>
+                    <Text style = {styles.title}>Other Causes You Follow</Text>
+                    <ScrollView> 
+                    </ScrollView>
+                </View>
+        </ScrollView> 
         </View>
       </View>
     );
 }
 
-export default Profile;
+export default YourCauses;
+
 
 const styles = StyleSheet.create({
   ScreenContainer: {
@@ -56,7 +55,7 @@ const styles = StyleSheet.create({
     flex:1,
     paddingTop: '0%',
     backgroundColor: '#fff',
-
+    alignItems: 'center',
   },
   overlay: {
     backgroundColor:'rgba(2,0,0,0.6)',
@@ -66,6 +65,12 @@ const styles = StyleSheet.create({
   image: {
     width: '100%',
     height: 180,
+    
+  },
+  imageCause: {
+    width: '100%',
+    height: 120,
+    marginTop: 20,
     
   },
   proPic: {
@@ -101,37 +106,24 @@ const styles = StyleSheet.create({
     fontSize: 18,
     color: "#8390FA",
     fontWeight: 'bold',
-    justifyContent: 'flex-start',
-    paddingLeft: 30,
+    justifyContent: 'center',
 
   },
-  ProfileContainter:{
-    height:150,
-    width:160,
-    backgroundColor: "#E12F2F"
-     
-  },
-  header: {
-    position:"absolute",
-    top:0,
-    left:0,
-    right:0,
-    height:100,
-    backgroundColor:'white',
-    flexDirection:"row",
-    justifyContent:"space-between",
-    elevation:4,
-  },
-  headerText:{
-      fontWeight:"bold",
-      fontSize:35,
-      left:30,
-      bottom:30,
-      position:'absolute'
-  },
-  menu:{
-    right:30,
-    bottom:30,
-    position:'absolute'
-  }
+    HelpButtonContainer: {
+    
+        backgroundColor: "#ED254E",
+        borderRadius: 35,
+        paddingVertical: 14,
+        paddingHorizontal: 40,
+        shadowColor: '#000000',
+        shadowOffset: { height: 1, width: 1 }, 
+        shadowOpacity: 100, 
+        shadowRadius: 5,
+    },
+    HelpButtonText: {
+        fontSize: 14,
+        color: "#fff",
+        alignSelf: "center",
+        
+    }
 });
