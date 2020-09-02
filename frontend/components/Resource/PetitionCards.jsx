@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, TouchableOpacity, View, ScrollView } from 'react-native';
+import { StyleSheet, TouchableOpacity, View, ScrollView, TouchableWithoutFeedback } from 'react-native';
 //import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { Card, Text, Avatar, IconButton } from 'react-native-paper';
 import { AntDesign } from '@expo/vector-icons';

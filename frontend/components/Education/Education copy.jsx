@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import { StyleSheet, Text, View,TouchableOpacity,ImageBackground } from 'react-native';
+import { StyleSheet, Text, View,TouchableOpacity,ImageBackground,Alert } from 'react-native';
 import {WebView} from 'react-native-webview';
 import {Follow} from './FollowButton';
 import {Resource} from '../General/ResourceButton';
@@ -10,11 +10,12 @@ import LightAndInfin from './LightAndInfin';
 // education template
 
 
- const Education =({navigation}) => {
-         
-         const CauseDetails = useContext(CauseContext);
-        // const setCauseDetails = useContext(CauseDispatchContext);
-         const image = { uri: CauseDetails.cause1.imgURL};
+ const Education =({route, navigation}) => {
+      const CauseDetails = useContext(CauseContext);
+      
+      const { causeNum } = route.params;
+      var cause = CauseDetails[causeNum];
+      const image = { uri: cause.imgURL};
 
          return (
            
@@ -26,7 +27,7 @@ import LightAndInfin from './LightAndInfin';
                         <ImageBackground source={image} style={styles.image} >
                         <View style={styles.overlay}>
                             <Text></Text>
-                            <Text style= {styles.headerHashtag}> {CauseDetails.cause1.hashtagName} </Text>
+                            <Text style= {styles.headerHashtag}> {cause.hashtagName} </Text>
                             <Text style= {styles.text}>15k followers</Text>
                             <View style={{justifyContent: 'center'}}>
                             <View style={{flexDirection: 'row', justifyContent: 'center'}}>
