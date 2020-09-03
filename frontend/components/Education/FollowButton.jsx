@@ -3,74 +3,116 @@ import {View, CheckBox, StyleSheet, TouchableOpacity, TouchableHighlight,Text, M
 import { IconButton, Colors, Checkbox } from 'react-native-paper';
 
 
-export const Follow = () => {
+export default class Testing extends React.Component{
 
-  const [modalVisible, setModalVisible] = useState(false);
-  var pressed = false;
-
- 
-  return (
-    <View style={styles.screenContainer}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={modalVisible}
-          onRequestClose={() => {
-              Alert.alert("Modal has been closed.");
-          }}>
-
-        <View>
-          <View style={styles.modalView}>
-                     
-            <Text style={styles.text}> You are now following </Text>
-            <Text style= {styles.hashtagText}>NAME OF ISSUE</Text>
-{/*             
-            <View style={{ flexDirection: 'column'}, {marginRight:60}, {marginLeft:60}} >
-
-              <View style={{ flexDirection: 'row'}}>
-                  <CheckBox
-                  value={isSelected}
-                  onValueChange={setSelection}
-                  color= "black"
-                  style={{alignSelf:"center"}}
-                  />
-                  <Text style={styles.CheckBoxText}> Enable push notifications to receive breaking news updates about this cause</Text>
-              </View>
-
-                
-            </View> */}
-               <View style={styles.SaveButtonContainer}>
-                  < TouchableOpacity 
-                      onPress={() => {setModalVisible(!modalVisible);  }}>
-
-                  <Text style={styles.SaveButtonText}>Save</Text>
-                  </TouchableOpacity>
-
-                </View> 
-
-            <IconButton
-              icon="close"
-              color={Colors.black}
-              size={30}
-              style={styles.icon}
-              onPress={() => {setModalVisible(!modalVisible);}}/>
-          </View>
-
-        </View>
-      </Modal>
-
-      <TouchableHighlight
-        style={styles.FollowButtonContainer}
-        onPress={() => {
-          setModalVisible(true);
-        }}
-      >
-        <Text style={styles.FollowButtonText}>Follow</Text>
-      </TouchableHighlight>
+    constructor(props) {
+        super(props);
+        this.state = {following: false, modalVisible: false, setModalVisible: false}; 
+      }
+      
+      onPress = (fol, modal) => {
+        this.setState({
+          following: fol,
+          modalVisible: modal
+        });
+      }
+    render () {
+        if (this.state.following) {
+            return (
+              <View style={styles.screenContainer}>
+                  <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert("Modal has been closed.");
+                    }}>
+          
+                  <View>
+                    <View style={styles.modalView}>
+                               
+                      <Text style={styles.text}> You are now following this cause</Text>
+                      {/* <Text style= {styles.hashtagText}>NAME OF ISSUE</Text> 
         
-   </View>
-  );
-};
+                         <View style={styles.SaveButtonContainer}>
+                            < TouchableOpacity 
+                                onPress={() => this.onPress(this.state.following, false)}>
+          
+                            <Text style={styles.SaveButtonText}>Save</Text>
+                            </TouchableOpacity>
+          
+                        </View> */}
+          
+                      <IconButton
+                        icon="close"
+                        color={Colors.black}
+                        size={30}
+                        style={styles.icon}
+                        onPress={() => this.onPress(this.state.following, false)}/>
+                    </View>
+          
+                  </View>
+                </Modal>
+          
+                <TouchableHighlight
+                  style={styles.FollowingButtonContainer}
+                  onPress={() => this.onPress(false, true)}
+                >
+                  <Text style={styles.FollowingButtonText}>Following</Text>
+                </TouchableHighlight>
+                  
+             </View>
+            );
+          } else {
+            return (
+              <View style={styles.screenContainer}>
+                  <Modal
+                    animationType="slide"
+                    transparent={true}
+                    visible={this.state.modalVisible}
+                    onRequestClose={() => {
+                        Alert.alert("Modal has been closed.");
+                    }}>
+          
+                  <View>
+                    <View style={styles.modalView}>
+                               
+                      <Text style={styles.text}> You have unfollowed this cause </Text>
+                      {/*<Text style= {styles.hashtagText}>NAME OF ISSUE</Text>
+                         <View style={styles.SaveButtonContainer}>
+                            <TouchableOpacity 
+                                onPress={() => this.onPress(this.state.following, false)}>
+          
+                                <Text style={styles.SaveButtonText}>Save</Text>
+                            </TouchableOpacity>
+          
+                         </View> */}
+                        <IconButton
+                        icon="close"
+                        color={Colors.black}
+                        size={30}
+                        style={styles.icon}
+                        onPress={() => this.onPress(this.state.following, false)}/>
+                      
+                    </View>
+          
+                  </View>
+                </Modal>
+          
+                <TouchableHighlight
+                  style={styles.FollowButtonContainer}
+                  onPress={() => this.onPress(true, true)}
+                >
+                  <Text style={styles.FollowButtonText}>Follow</Text>
+                </TouchableHighlight>
+                  
+             </View>
+            );
+        
+         }
+
+    }
+}
 
 const styles = StyleSheet.create({
   screenContainer: {
@@ -108,13 +150,22 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 25
   },
+  FollowingButtonContainer: {
+    backgroundColor: "#4C00C9",
+    borderRadius: 18,
+    paddingVertical: 10,
+    paddingHorizontal: 25
+  },
   FollowButtonText: {
     fontSize: 14,
     color: "#4C00C9",
     alignSelf: "center",
-    
   },
-  
+  FollowingButtonText: {
+    fontSize: 14,
+    color: "white",
+    alignSelf: "center",
+  },
   text:{
     alignItems: "center",
     fontSize:16,

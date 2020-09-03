@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity, ImageBackground } from 'react-native';
-import {Follow }from './FollowButton';
+import Follow from './FollowButton';
 import {Resource} from '../General/ResourceButton';
 import LightAndInfin from './LightAndInfin';
 import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../Causes/CauseContext';
