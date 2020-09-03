@@ -14,14 +14,14 @@ export default class Overview extends React.Component {
                 <View style= {styles.body}>
             
                 <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                <Text>Americans and Black communities around the world.</Text>
+                <Text>{this.props.value.who}</Text>
+               
                 <Text></Text>
                 <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
-                <Text>A movement advocating for non-violent civil disobidience in protest against 
-                    incidents of police brutality and all racially motivated violence against Black-Americans. </Text>
+                <Text>{this.props.value.what}</Text>
                 <Text></Text>
                 <Text style= {styles.title}>WHEN?</Text>
-                <Text>Black Americans and other members of the Black community around the world.</Text>
+                <Text>{this.props.value.when}</Text>
                 <Text></Text>
                 <Text style= {styles.title}>WHERE?</Text>
                 <Text></Text>
@@ -29,11 +29,12 @@ export default class Overview extends React.Component {
 
                 <WebView
                     source={{html: require('./Globe/globe.js')()}}
-                    style={{height:200, width:200}}
+                    style={{height:150, width:200}}
                 />
+                
                 <View style= {styles.body}>
                 <Text style= {styles.title}>WHY THIS MATTERS...</Text>
-                <Text>Black Americans are being discriminated against, targetted and killed at disproportionate rates.</Text>
+                <Text>{this.props.value.why}</Text>
                 <Text></Text>
                 </View>
 

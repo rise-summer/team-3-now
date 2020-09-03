@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, ScrollView, ImageBackground, Image } from 'react-native';
-import {Ionicons} from '@expo/vector-icons';
 import Header from '../General/Header';
 import pic from './headerpic.jpg';
 import Saved from './Saved';

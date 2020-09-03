@@ -1,6 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
 import Overview from './Overview';
 import LearnMore from './LearnMore';
 
@@ -9,6 +8,7 @@ export default class LightAndInfin extends React.Component {
     constructor(props) {
       super(props);
       this.state = {isLight: true }; 
+
     }
     
     onPress = (page) => {
@@ -16,11 +16,14 @@ export default class LightAndInfin extends React.Component {
         isLight: page
       });
     }
-
+    
     render () {
+      // Alert.alert(this.props.value.who);
       if (this.state.isLight) {
         return (
+          
           <View style={styles.container}>
+            
             <View style = {styles.buttonContainer}>
               <View style={styles.buttons}>
                 <View style={styles.pageSelected}>
@@ -44,7 +47,7 @@ export default class LightAndInfin extends React.Component {
             </View>
             <View style = {styles.pageContainer}>
               
-              <Overview></Overview> 
+              <Overview  value={this.props.value} ></Overview> 
             </View>
           </View>
         );

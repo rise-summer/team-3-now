@@ -1,10 +1,8 @@
 import React, {useContext} from 'react';
 import { StyleSheet, Text, View,TouchableOpacity,ImageBackground,Alert } from 'react-native';
-import {WebView} from 'react-native-webview';
 import {Follow} from './FollowButton';
 import {Resource} from '../General/ResourceButton';
-import LightInfin from './LightAndInfin';
-import {CauseProvider, CauseContext,CauseDispatchContext} from '../CauseContext';
+import {CauseProvider, CauseContext} from '../CauseContext';
 import LightAndInfin from './LightAndInfin';
 
 // education template
@@ -38,7 +36,7 @@ import LightAndInfin from './LightAndInfin';
                         </View>
                         </ImageBackground> 
                     </View>  
-                    <LightAndInfin></LightAndInfin>
+                    <LightAndInfin value={cause} ></LightAndInfin>
 
                     <TouchableOpacity
                         onPress={()=> navigation.navigate('Impact')} 

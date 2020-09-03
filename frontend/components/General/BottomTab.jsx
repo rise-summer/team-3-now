@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { Text, View, StyleSheets, Image } from 'react-native';
+import { Text, View, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import Profile  from "../Profile/ProfilePage";
 import  Search from "../Search/SearchPage";
-import Header from '../General/Header';
-
 import Education from '../Education/Education copy';
 import Impact from '../Impact/Impact';
 import ResourcePage from '../Resource/ResourcePage';

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {View, CheckBox, StyleSheet, TouchableOpacity, TouchableHighlight,Text, Modal} from "react-native";
+import {View, StyleSheet, TouchableOpacity, TouchableHighlight,Text, Modal} from "react-native";
 import { IconButton, Colors, Checkbox } from 'react-native-paper';
 
 
