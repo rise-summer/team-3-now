@@ -8,6 +8,7 @@ import  Search from "../Search/SearchPage";
 import Header from '../General/Header';
 
 import Education from '../Education/Education';
+import Education2 from '../Education/Education2';
 import Impact from '../Impact/Impact';
 import ResourcePage from '../Resource/ResourcePage';
 import logo from './logo.png';
@@ -18,10 +19,18 @@ const Tab = createMaterialBottomTabNavigator();
 const Stack = createStackNavigator();
 
 
+function LogoTitleF() {
+  return (
+    <Image
+      style={{ width: 78, height: 30, marginLeft: 320}}
+      source={logo}
+    />
+  );
+}
 function LogoTitle() {
   return (
     <Image
-      style={{ width: 60, height: 28, marginLeft: 280}}
+      style={{ width: 78, height: 30, marginLeft: 260}}
       source={logo}
     />
   );
@@ -41,13 +50,13 @@ export default function Bottom() {
           options={{
             //tabBarLabel: 'Search',
             tabBarIcon: ({ color }) => (
-                <Ionicons name="md-search" color={color} size={26} />
+                <Ionicons name="md-search" color={color} size={28} />
             ),
           }}> 
 
         {()=>(
           <Stack.Navigator >
-              <Stack.Screen name="Search" component={Search} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="Search" component={Search} options={{ headerTitle: props => <LogoTitleF {...props} /> }}/>
               <Stack.Screen name="Education" component={Education} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
               <Stack.Screen name="Impact" component={Impact} options={{ headerTitle: props => <LogoTitle {...props} /> }} />
               <Stack.Screen name="ResourcePage" component={ResourcePage} options={{ headerTitle: props => <LogoTitle {...props} /> }} />
@@ -60,14 +69,17 @@ export default function Bottom() {
           options={{
             //tabBarLabel: 'Search',
             tabBarIcon: ({ color }) => (
-              <Ionicons name="md-person" color={color} size={26} />
+              <Ionicons name="md-person" color={color} size={28} />
             ),
           }}> 
 
         {()=>(
           <Stack.Navigator >
-              <Stack.Screen name="Profile" component={Profile} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="Profile" component={Profile} options={{ headerTitle: props => <LogoTitleF {...props} /> }}/>
               <Stack.Screen name="YourCauses" component={YourCauses} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              <Stack.Screen name="Education" component={Education2} options={{ headerTitle: props => <LogoTitle {...props} /> }}/>
+              {/* <Stack.Screen name="Impact" component={Impact} options={{ headerTitle: props => <LogoTitle {...props} /> }} />
+              <Stack.Screen name="ResourcePage" component={ResourcePage} options={{ headerTitle: props => <LogoTitle {...props} /> }} /> */}
             </Stack.Navigator>
         )}
         </Tab.Screen>

@@ -8,10 +8,10 @@ import profilePic from './profilePic.png';
 import { AntDesign } from '@expo/vector-icons';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
+
  const Profile =({navigation}) => {
     return (      
     <View style={styles.ScreenContainer}>
-      <Header></Header>
         <View style={styles.body}> 
           <View style={styles.hheader}>
             <ImageBackground source={pic} style={styles.image} >
@@ -20,8 +20,8 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
                 <View style={{alignItems: 'center', height:0}}>
                   <Image source={profilePic} style={styles.proPic}></Image>
                 </View>
-                <Text style= {styles.headerHashtag}> Jane Doe </Text>
-                <Text style= {styles.text}>activist | learner</Text>
+                <Text style= {styles.headerHashtag}> Samantha </Text>
+                <Text style= {styles.text}>ULCA | BLM</Text>
                 <View style={{justifyContent: 'center'}}>
                 </View>
               </View>
@@ -30,9 +30,9 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
             <View style={{ height: 160, marginTop: 50, width: '100%', justifyContent: 'flex-start', marginLeft: 30}}>
               <Text style = {styles.title}>Your Top Causes</Text>
               <Text></Text>
-              <Text> 1. Yemen Resource Crisis </Text>
-              <Text> 2. Beirut, Lebanon Explosion </Text>
-              <Text> 3. Free Palestine Movement </Text>
+              <Text> 1. Black Lives Matter </Text>
+              <Text> 2. California Wildfires </Text>
+              <Text> 3. Yemen Resource Crisis </Text>
               <View style={{ height: 160, marginTop: 10, width: '100%', flexDirection: 'row', justifyContent: 'flex-start'}}>
               <Text> See your other causes </Text>
               <TouchableOpacity
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 
   },
   overlay: {
-    backgroundColor:'rgba(2,0,0,0.6)',
+    backgroundColor:'rgba(2,0,0,0.5)',
     height: 180,
   },
 
@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   hheader: {
     flex:1,
-    width: 400,
+    width: 420,
     paddingTop: '0%',
     paddingLeft: '0%',
     alignItems: 'center',

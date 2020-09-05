@@ -17,10 +17,10 @@ export default class Overview extends React.Component {
                     <View style= {styles.body}>
                 
                     <Text style= {styles.title}>WHO DOES IT AFFECT?</Text>
-                    <Text style = {styles.text} >Americans and Black communities around the world.  </Text>
+                    <Text style = {styles.text} >Residents of the United States and its territories.</Text>
                     <Text></Text>
                     <Text style= {styles.title}>WHY IS IT IMPORTANT?</Text>
-                    <Text style = {styles.text}>Black Americans are being killed by police and the United States carceral system at extremely disproportionate rates. 
+                    <Text style = {styles.text}>Presidential elections keep democracy functioning and allow United States citizens to exercise their right to vote and select their own government.  
                     </Text>
                     <Text></Text>
                     <Text style= {styles.title}>WHERE IS IT HAPPENING?</Text>
@@ -37,7 +37,8 @@ export default class Overview extends React.Component {
 
                     <Text></Text>
                     <Text style= {styles.title}>WHAT IS HAPPENING?</Text>
-                    <Text style = {styles.text}>The Black Lives Matter movement was founded in 2013 after the murder of Trayvon Martin. On May 25th, 2020, the Minneapolis police murdered George Floyd, sparking protests across the world in the name of the #BlackLivesMatter movement, mobilizing against police brutality and anti-Black racism. Most recently, Jacob Blake of Kenosha, Wisconsin has been paralyzed by the police after being shot 7 times at close range. Protests are continually being organized as protesters demand justice for lives of Black Americans lost to anti-Black racism. </Text>
+                    <Text style = {styles.text}>On November 3rd, 2020, eligible voters will elect a new president or re-elect Republican incumbent Donald Trump. His Democratic opponent is Joe Biden, the Vice President of former President Barack Obama. The presidential election will occur simultaneously with elections to the Senate and the House of Representatives.
+ </Text>
                     <Text></Text>
                    
                     </View>

@@ -26,11 +26,11 @@ export default class SavedCards extends React.Component{
                                 <Text>    </Text>
                                 <Icon name="email" size={24} color="#8390FA"></Icon>
                                 <Text>   </Text>
-                                <Text style= {styles.title}>Stand with Breonna Taylor</Text>
+                                <Text style= {styles.title}>Demand Justice Templates</Text>
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Broenna Taylor was a model citizen who loved her community and family. She deserves justice... </Text>
+                                    <Text>Demand justice for the Black lives lost to unjustly to violence and discrimination. Select a city to email representatives... </Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -67,7 +67,7 @@ export default class SavedCards extends React.Component{
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Donate to support first responders and people affected by the explosion in Beirut...</Text>
+                                    <Text>Donate to support first responders and people affected by the recent devastating explosion in Beirut...</Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -100,11 +100,11 @@ export default class SavedCards extends React.Component{
                                 <Text>    </Text>
                                 <Icon name="heart" size={24} color="#8390FA"></Icon>
                                 <Text>  </Text>
-                                <Text style= {styles.title}>Justice for Ahmaud Arbery</Text>
+                                <Text style= {styles.title}>Red Cross Disaster Voluteering</Text>
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>In honor of Ahmaud Arbery, who was killed while jogging—unarmed—in Georgia... </Text>
+                                    <Text>The American Red Cross needs volunteers to care for people affected by the California Wildfires... </Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -135,13 +135,13 @@ export default class SavedCards extends React.Component{
                             <Card style={styles.cards}>
                             <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                                 <Text>    </Text>
-                                <Icon name="star" size={24} color="#8390FA"></Icon>
+                                <Icon name="pencil" size={24} color="#8390FA"></Icon>
                                 <Text>  </Text>
-                                <Text style= {styles.title}>Hands Up Act</Text>
+                                <Text style= {styles.title}>End the Famine in Yemen</Text>
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Sign this petetion in support of the Hands Up Act which proposes punishment for police officers shooting unarmed citizens... </Text>
+                                    <Text> People in Yemem are starving to death. Sign the petition to call for the end of the war and the famine ... </Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>
@@ -192,7 +192,7 @@ const styles = StyleSheet.create({
       paddingTop: '2%',  
     },
     cards: {
-      width: '90%',
+      width: '98%',
       marginTop: '0%',
       paddingTop: '0%'
     },

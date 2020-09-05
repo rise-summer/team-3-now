@@ -14,9 +14,9 @@ export default class LearnMore extends React.Component {
                     <View style={styles.cards}>
                     <TouchableOpacity>
                         <Card style={styles.cardsGreen}>
-                            <Card.Cover source={{ uri: 'https://www.gannett-cdn.com/presto/2020/06/16/USAT/3d6bdf71-183f-48c6-bb2d-5b72d579d333-hiero.floyd.1.jpg?width=660&height=495&fit=crop&format=pjpg&auto=webp'}} />
+                            <Card.Cover source={{ uri: 'https://www.nationalgeographic.com/content/dam/science/2019/10/31/california-wildfires/california-fires-ash-air-pollution.adapt.1900.1.jpg'}} />
                             <Card.Content style={styles.cardInfo}>
-                                <Text style={styles.cardText}>Activists See Progress After George Floyd's Death But Say ore Must Be Done. Source: USA Today</Text>
+                                <Text style={styles.cardText}>Wildfires Pose New Threats As Homes Burn, Releasing Toxic Fumes. Source: Natural Geographic</Text>
                             </Card.Content>
                         </Card>
                     </TouchableOpacity>
@@ -25,9 +25,9 @@ export default class LearnMore extends React.Component {
                     <TouchableOpacity
                         onPress={()=> null}>
                         <Card style={styles.cardsGreen}>
-                        <Card.Cover source={{ uri:'https://cdn.cnn.com/cnnnext/dam/assets/200611132359-la-black-lives-matter-protest-medium-plus-169.jpg '}} />
+                        <Card.Cover source={{ uri:'https://i.insider.com/5dbb34cbe0ee7e349d136df9?width=1620'}} />
                         <Card.Content style={styles.cardInfo}>
-                        <Text style={styles.cardText}>How Black Lives Matter Went From a Hashtag To a Global Rallying Cry. Source: CNN</Text>
+                        <Text style={styles.cardText}>All Of The Important Dates You Need To Know For The 2020 Presidential Election. Source: Business Insider</Text>
                         </Card.Content>
                         </Card>
                     </TouchableOpacity>
@@ -36,9 +36,9 @@ export default class LearnMore extends React.Component {
                     <TouchableOpacity
                         onPress={()=> null}>
                         <Card style={styles.cardsGreen}>
-                        <Card.Cover source={{ uri: 'https://cdn.cnn.com/cnnnext/dam/assets/200607170022-01-lapd-protesters-george-floyd-super-169.jpg' }} />
+                        <Card.Cover source={{ uri: 'https://media.npr.org/assets/img/2020/07/20/gettyimages-1224649903-94d02251f654005c98355c748fe319ed62da7120-s1500-c85.jpg'}} />
                         <Card.Content style={styles.cardInfo}>
-                            <Text style={styles.cardText}>Following Backlash, LA Officials Say They Won't Criminally Charge Or Fine Peaceful Protesters. Source: CNN</Text>
+                            <Text style={styles.cardText}>Why Rights Groups Worry About The Philippines' New Anti-Terrorism Law. Source: NPR</Text>
                         </Card.Content>
                         </Card>
                     </TouchableOpacity>
@@ -49,9 +49,9 @@ export default class LearnMore extends React.Component {
                     <TouchableOpacity
                         onPress={()=> null}>
                         <Card style={styles.cardsGreen}>
-                        <Card.Cover source={{ uri: 'https://i.guim.co.uk/img/media/9497ebaa49fac486d6879926ab1e9d471c2f3b5f/0_172_5176_3107/master/5176.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=6b9acca7e5c0c4039752e22f27c5276b' }} />
+                        <Card.Cover source={{ uri: 'https://static01.nyt.com/images/2020/08/13/us/opinion-school-reopenings-promo-1597374442567/opinion-school-reopenings-promo-1597374442567-superJumbo-v5.jpg?quality=90&auto=webp' }} />
                         <Card.Content style={styles.cardInfo}>
-                            <Text style={styles.cardText}>Cummings Recruit Sacked After Suggesting Police Use 'Live Rounds' On BLM Protesters. Source: The Guardian</Text>
+                            <Text style={styles.cardText}>Schools Briefing: The State of Play for K-12. Source: New York Times</Text>
                         </Card.Content>
                         </Card>
                     </TouchableOpacity>
@@ -108,4 +108,3 @@ const styles = StyleSheet.create({
         fontSize: 14,
       },
   });
-

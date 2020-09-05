@@ -2,15 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View,TouchableOpacity, ImageBackground } from 'react-native';
 import Follow from './FollowButton';
 import {Resource} from '../General/ResourceButton';
-import LightAndInfin from './LightAndInfin';
+import LightAndInfin from './LightAndInfin2';
 import {CauseProvider, CauseContext,CauseDispatchContext, CauseDetails} from '../CauseContext';
 import Header from '../General/Header';
 
 
 // blm education page
 
-const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-Toronto-as-police-probe-Korchinski-Paquet-s-death--QWE3JcrPig/img/dddc7a4d81b1410f8a7aabffec98efcf/dddc7a4d81b1410f8a7aabffec98efcf.png"};
- const Education =({navigation}) => {
+const image = { uri: "https://ichef.bbci.co.uk/news/410/cpsprodpb/9665/production/_113810583_index_promo_poll_tracker_bw_976.png"};
+ const Education2 =({navigation}) => {
     return (      
     <View style={styles.ScreenContainer}>
 
@@ -19,8 +19,8 @@ const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-T
             <ImageBackground source={image} style={styles.image} >
               <View style={styles.overlay}>
                 <Text></Text>
-                <Text style= {styles.headerHashtag}> Black Lives Matter </Text>
-                <Text style= {styles.text}>15k followers</Text>
+                <Text style= {styles.headerHashtag}> 2020 US Election </Text>
+                <Text style= {styles.text}>10k followers</Text>
                 <View style={{justifyContent: 'center'}}>
                 <View style={{flexDirection: 'row', justifyContent: 'center'}}>
                     <Follow></Follow>
@@ -44,7 +44,7 @@ const image = { uri: "https://news.cgtn.com/news/2020-05-31/Thousands-rally-in-T
     );
 }
 
-export default Education;
+export default Education2;
 
 
 const styles = StyleSheet.create({

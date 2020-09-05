@@ -30,7 +30,7 @@ export default class PetitionCards extends React.Component{
                                             
                             </View>
                                 <Card.Content style={styles.cardInfo}>
-                                    <Text>Broenna Taylor was an award-winning EMT and model citizen. She loved her family and community, working at two hospitals as an... </Text>
+                                    <Text>Breonna Taylor was an award-winning EMT and model citizen. She loved her family and community, working at two hospitals as an... </Text>
                                 </Card.Content>
                                 <Card.Content style={styles.cardInfo}>
                                     <Text></Text>

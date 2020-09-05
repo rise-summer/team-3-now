@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
       height: 180,
     },
     header: {
-      width: 400,
+      width: 420,
       paddingTop: '0%',
       paddingLeft: '0%',
       alignItems: 'center',
